@@ -1,7 +1,7 @@
 @import 'variables';
 
-@import 'components/reset';
+@import 'layout/reset';
+@import 'layout/base';
 @import 'components/logo';
-@import 'components/base';
 
 @import 'mixins/breakpoints';
