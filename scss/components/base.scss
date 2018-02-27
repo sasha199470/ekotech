@@ -1,0 +1,27 @@
+body {
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    color: $main-text-color;
+    line-height: 1.73;
+    letter-spacing: 0.5px;
+}
+
+h1, h2 {
+    color: $header-text-color;
+
+    .inverse-color {
+        color: white
+    }
+}
+
+h1 {
+    font-size: 40px;
+
+    @include media-breakpoint-min(md) {
+        font-size: 44px;
+    }
+}
+
+h2 {
+    font-size: 28px;
+}

@@ -1,3 +1,7 @@
-body {
-    background: green;
-}
+@import 'variables';
+
+@import 'components/reset';
+@import 'components/logo';
+@import 'components/base';
+
+@import 'mixins/breakpoints';

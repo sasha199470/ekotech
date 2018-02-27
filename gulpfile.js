@@ -11,6 +11,7 @@ let browserSync = require('browser-sync').create();
 let paths = {
     dest: './dist',
     sass: './scss/style.scss',
+    sassWatch: ['./scss/style.scss', './scss/**/*.scss'],
     pug: ['./pug/*.pug', '!./pug/layout.pug'],
     pugWatch: ['./pug/*.pug', './pug/**/*.pug'],
     pugWithLayout: './pug/*.pug',
@@ -49,8 +50,8 @@ gulp.task('start-server', () => {
     });
 })
 
-gulp.task("default", gulp.series(gulp.parallel('scss', 'pug'), 'start-server'));
+gulp.task("default", gulp.series(gulp.series('json', gulp.parallel('scss', 'pug')), 'start-server'));
 
-gulp.watch(paths.sass, gulp.parallel('scss')).on('change', browserSync.reload);
+gulp.watch(paths.sassWatch, gulp.parallel('scss')).on('change', browserSync.reload);
 gulp.watch(paths.pugWatch, gulp.parallel('pug')).on('change', browserSync.reload);
 gulp.watch(paths.jsonIn, gulp.series('json', 'pug')).on('change', browserSync.reload);
