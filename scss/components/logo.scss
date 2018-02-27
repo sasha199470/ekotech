@@ -1,4 +1,9 @@
 .logo {
-    width: 48px;
-    height: 40px;
+    width: 156px;
+    height: 52px;
+    margin-top: 78px;
+
+    @include media-breakpoint-min(md) {
+        margin-top: 0;
+    }
 }

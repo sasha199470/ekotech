@@ -1,0 +1,11 @@
+header {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  padding: 45px 0;
+
+  @include media-breakpoint-min(md) {
+    align-items: center;
+    padding: 30px 0;
+  }
+}

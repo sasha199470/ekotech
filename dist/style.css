@@ -45,62 +45,69 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.logo {
-  width: 48px;
-  height: 40px; }
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
 body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-body {
+  font-size: 15px;
   font-family: 'Open Sans', sans-serif;
   color: #5d5f65;
   line-height: 1.73;
-  letter-spacing: 0.5; }
+  letter-spacing: 0.5px; }
+
+h1, h2 {
+  font-family: 'Arimo', sans-serif;
+  color: #141720; }
+  h1 .inverse-color, h2 .inverse-color {
+    color: white; }
 
 h1 {
   font-size: 40px; }
+  @media (min-width: 769px) {
+    h1 {
+      font-size: 44px; } }
+
+h2 {
+  font-size: 28px; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+.container {
+  width: 100%; }
+  @media (min-width: 1201px) {
+    .container {
+      width: 1200px;
+      margin: 0 auto; } }
+
+header {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  padding: 45px 0; }
+  @media (min-width: 769px) {
+    header {
+      align-items: center;
+      padding: 30px 0; } }
+
+.logo {
+  width: 156px;
+  height: 52px;
+  margin-top: 78px; }
+  @media (min-width: 769px) {
+    .logo {
+      margin-top: 0; } }
+
+nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: normal; }
+  nav a {
+    cursor: pointer; }
+  nav a + a {
+    margin-left: 30px; }
+  @media (min-width: 769px) {
+    nav {
+      width: auto;
+      margin-left: auto; } }
