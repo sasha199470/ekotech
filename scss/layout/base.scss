@@ -1,23 +1,25 @@
 body {
   font-size: 15px;
   font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
   color: $main-text-color;
   line-height: 1.73;
   letter-spacing: 0.5px;
+}
+
+.inverse-color * {
+  color: white !important;
 }
 
 h1, h2 {
   font-family: 'Arimo', sans-serif;
   color: $header-text-color;
   line-height: normal;
-
-  .inverse-color {
-    color: white
-  }
 }
 
 h1 {
   font-size: 40px;
+  font-weight: 900;
 
   @include media-breakpoint-min(md) {
     font-size: 44px;
@@ -26,6 +28,7 @@ h1 {
 
 h2 {
   font-size: 28px;
+  margin-bottom: 36px;
 }
 
 a {

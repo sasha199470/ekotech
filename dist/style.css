@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -48,25 +49,29 @@ table {
 body {
   font-size: 15px;
   font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
   color: #5d5f65;
   line-height: 1.73;
   letter-spacing: 0.5px; }
+
+.inverse-color * {
+  color: white !important; }
 
 h1, h2 {
   font-family: 'Arimo', sans-serif;
   color: #141720;
   line-height: normal; }
-  h1 .inverse-color, h2 .inverse-color {
-    color: white; }
 
 h1 {
-  font-size: 40px; }
+  font-size: 40px;
+  font-weight: 900; }
   @media (min-width: 769px) {
     h1 {
       font-size: 44px; } }
 
 h2 {
-  font-size: 28px; }
+  font-size: 28px;
+  margin-bottom: 36px; }
 
 a {
   color: inherit;
@@ -129,3 +134,44 @@ nav {
   @media (min-width: 769px) {
     .description {
       font-size: 24px; } }
+
+.two-parts-block {
+  display: flex;
+  width: 100%;
+  flex-direction: column-reverse; }
+  .two-parts-block .text-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px 25px;
+    background: #141720; }
+    @media (min-width: 769px) {
+      .two-parts-block .text-wrapper {
+        padding: 0 135px; }
+        .two-parts-block .text-wrapper .text {
+          width: 450px; } }
+  .two-parts-block .image img {
+    display: block;
+    width: 100%;
+    height: 177px; }
+  @media (min-width: 769px) {
+    .two-parts-block .image {
+      width: 100%;
+      height: 100%; }
+      .two-parts-block .image img {
+        height: 700px; } }
+  @media (min-width: 769px) {
+    .two-parts-block {
+      flex-direction: row; } }
+
+ul {
+  margin-top: 15px; }
+  ul li {
+    padding-left: 35px;
+    position: relative; }
+    ul li::before {
+      content: "•";
+      position: absolute;
+      left: 12px; }

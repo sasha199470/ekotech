@@ -1,4 +1,7 @@
 extend layout.pug
 
+include mixins/two-parts-block
+
 block content
-  include includes/name.pug
+  include includes/name
+  +two-parts-block(twoPartsBlock.about, "./images/dummy.svg")
