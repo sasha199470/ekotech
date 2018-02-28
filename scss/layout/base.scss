@@ -9,6 +9,7 @@ body {
 h1, h2 {
   font-family: 'Arimo', sans-serif;
   color: $header-text-color;
+  line-height: normal;
 
   .inverse-color {
     color: white
@@ -30,4 +31,8 @@ h2 {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.text-align-center {
+  text-align: center;
 }
