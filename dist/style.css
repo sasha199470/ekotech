@@ -1,4 +1,16 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'lucida_granderegular';
+  src: url("./fonts/lucidagrande-webfont.woff2") format("woff2"), url("./fonts/lucidagrande-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'avenirregular';
+  src: url("./fonts/avenir_roman-webfont.woff2") format("woff2"), url("./fonts/avenir_roman-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -49,7 +61,7 @@ table {
 body {
   font-size: 15px;
   font-family: 'Open Sans', sans-serif;
-  font-weight: normal;
+  font-weight: 100;
   color: #5d5f65;
   line-height: 1.73;
   letter-spacing: 0.5px; }
@@ -58,20 +70,22 @@ body {
   color: white !important; }
 
 h1, h2 {
-  font-family: 'Arimo', sans-serif;
   color: #141720;
-  line-height: normal; }
+  line-height: normal;
+  letter-spacing: 1px; }
 
 h1 {
   font-size: 40px;
-  font-weight: 900; }
+  font-weight: 900;
+  font-family: 'avenirregular', sans-serif; }
   @media (min-width: 769px) {
     h1 {
       font-size: 44px; } }
 
 h2 {
+  margin-bottom: 36px;
   font-size: 28px;
-  margin-bottom: 36px; }
+  font-family: 'lucida_granderegular', sans-serif; }
 
 a {
   color: inherit;
