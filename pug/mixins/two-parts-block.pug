@@ -1,12 +1,17 @@
-mixin two-parts-block(number, image)
-  div.two-parts-block.inverse-color
+mixin two-parts-block(context, image)
+  div.two-parts-block
     div.text-wrapper
       div.text
-        +content(number)
+        +content(context)
     div.image
       img(src=image)
 
-mixin content(number)
-  case number
-    when 0
-      include ../includes/about
+mixin content(context)
+  h2.inverse-color= context.header
+  p.inverse-color= context.text
+  ul.inverse-color
+    each item in context.list
+      li(href="#")= item
+  div.button-block
+    each button in context.buttons
+      button= button
