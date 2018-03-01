@@ -4,7 +4,11 @@
   align-items: center;
   width: 17px;
   position: relative;
-  left: 171px;
+  margin-left: 171px;
+
+  @include media-breakpoint-min(md) {
+    margin-left: 206px;
+  }
 }
 
 .scale-line {
@@ -40,4 +44,8 @@
   transform: translateX(-100%);
   white-space: nowrap;
   font-weight: 700;
+}
+
+.scale-content {
+  padding: 90px 25px 0 30px;
 }

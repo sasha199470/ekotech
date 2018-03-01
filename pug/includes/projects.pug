@@ -1,6 +1,13 @@
-div.container
+mixin getScaleContent(index)
+  case index
+    when 0
+      include ../projects/proj0
+
+div.container.flex
   div.scale
     each project in projects
       div.scale-line
       div.scale-point
         span.scale-date= project.date
+  div.scale-content
+    +getScaleContent(0)

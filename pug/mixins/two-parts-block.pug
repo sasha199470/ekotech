@@ -2,11 +2,11 @@ mixin two-parts-block(context, image)
   div.two-parts-block
     div.text-wrapper
       div.text
-        +content(context)
+        +getBlockContent(context)
     div.image
       img(src=image)
 
-mixin content(context)
+mixin getBlockContent(context)
   h2.inverse-color= context.header
   p.inverse-color= context.text
   ul.inverse-color

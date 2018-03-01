@@ -31,6 +31,10 @@ h2 {
   margin-bottom: 36px;
   font-size: 28px;
   font-family: 'lucida_granderegular', sans-serif;
+
+  &.h2-min-margin {
+    margin-bottom: 30px;
+  }
 }
 
 a {
