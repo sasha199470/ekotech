@@ -95,10 +95,11 @@ a {
   text-align: center; }
 
 .container {
+  position: relative;
   width: 100%; }
   @media (min-width: 1201px) {
     .container {
-      width: 1131px;
+      width: 1135px;
       margin: 0 auto; } }
 
 header {
@@ -193,7 +194,7 @@ ul {
 .button-block {
   margin-top: 20px; }
 
-button {
+button, .button {
   color: #ff7443;
   background: transparent;
   padding: 8px 18px;
@@ -203,7 +204,42 @@ button {
   margin-bottom: 12px;
   font-size: 16px;
   cursor: pointer; }
-  button:focus {
+  button:focus, .button:focus {
     outline: none; }
-  button:last-child {
+  button:last-child, .button:last-child {
     margin-right: 0; }
+
+.scale {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 17px;
+  position: relative;
+  left: 171px; }
+
+.scale-line {
+  width: 5px;
+  height: 80px;
+  background: #d8d8d8; }
+  .scale-line:first-child {
+    height: 90px; }
+  @media (min-width: 769px) {
+    .scale-line:first-child {
+      height: 145px; } }
+
+.scale-point {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border: 5px solid #d8d8d8;
+  border-radius: 15px;
+  background: transparent;
+  margin: 8px 0; }
+
+.scale-date {
+  position: absolute;
+  top: -4px;
+  left: -15px;
+  transform: translateX(-100%);
+  white-space: nowrap;
+  font-weight: 700; }

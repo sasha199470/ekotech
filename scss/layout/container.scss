@@ -1,8 +1,9 @@
 .container {
+    position: relative;
     width: 100%;
 
     @include media-breakpoint-min(xl){
-        width: 1131px;
+        width: 1135px;
         margin: 0 auto;
     }
 }

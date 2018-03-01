@@ -1,0 +1,43 @@
+.scale {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 17px;
+  position: relative;
+  left: 171px;
+}
+
+.scale-line {
+  width: 5px;
+  height: 80px;
+  background: #d8d8d8;
+
+  &:first-child {
+    height: 90px;
+  }
+
+  @include media-breakpoint-min(md) {
+    &:first-child {
+      height: 145px;
+    }
+  }
+}
+
+.scale-point {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border: 5px solid #d8d8d8;
+  border-radius: 15px;
+  background: transparent;
+  margin: 8px 0;
+}
+
+.scale-date {
+  position: absolute;
+  top: -4px;
+  left: -15px;
+  transform: translateX(-100%);
+  white-space: nowrap;
+  font-weight: 700;
+}
