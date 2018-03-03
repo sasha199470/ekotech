@@ -333,3 +333,23 @@ button, .button {
 
 .mb-15 {
   margin-bottom: 15px; }
+
+.services {
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .services .service {
+    flex: 1 0 290px;
+    max-width: 345px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .services .service .number {
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 100%;
+      border: solid 3px #ff7443;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
