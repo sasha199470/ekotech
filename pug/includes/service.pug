@@ -1,0 +1,8 @@
+div.container
+    h2.text-align-center Услуги
+    div.flex.services
+        each service, index in services
+            div.service
+                div.number=index+1
+                h3= service.title
+                p.text-align-center=service.description
