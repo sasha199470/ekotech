@@ -4,3 +4,10 @@
         @content;
     }
 }
+
+@mixin media-breakpoint-max($name, $breakpoints: $breakpoints) {
+    $width: map-get($map: $breakpoints, $key: $name);
+    @media (max-width: $width) {
+        @content;
+    }
+}

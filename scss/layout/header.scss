@@ -9,6 +9,7 @@ header {
   }
 
   @include media-breakpoint-min(md) {
+    flex-direction: row-reverse;
     align-items: center;
     padding: 30px 15px 200px;
   }
@@ -17,7 +18,7 @@ header {
 .navbar-toggler-wrapper {
   display: block;
   width: 100%;
-  padding: 18px;
+  padding: 18px 0;
   box-sizing: border-box;
 
   @include media-breakpoint-min(sm) {
@@ -42,6 +43,8 @@ header {
   }
 
   &.active {
+    position: fixed;
+    z-index: 11;
     span:nth-child(1) {
       top: 9px;
       transform: rotate(45deg);

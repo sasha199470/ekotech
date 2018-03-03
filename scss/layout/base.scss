@@ -5,6 +5,12 @@ body {
   color: $main-text-color;
   line-height: 1.73;
   letter-spacing: 0.5px;
+
+  @include media-breakpoint-max(sm) {
+    &.fix {
+      position: fixed;
+    }
+  }
 }
 
 .inverse-color {

@@ -2,13 +2,18 @@
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 require('./projects.js');
 require('./navbar.js');
-}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_9e2e1725.js","/")
+}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_90627209.js","/")
 },{"./navbar.js":2,"./projects.js":3,"buffer":5,"pBGvAp":7}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-let navbarToggler = document.getElementById('navbar-toggler');
+const navbarToggler = document.getElementById('navbar-toggler'),
+      navbar = document.getElementsByTagName('nav').item(0),
+      body = document.getElementsByTagName('body').item(0);
+
 
 navbarToggler.addEventListener('click', () => {
     navbarToggler.classList.toggle('active');
+    navbar.classList.toggle('active');
+    body.classList.toggle('fix');
 });
 
 }).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/navbar.js","/")
