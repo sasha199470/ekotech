@@ -7,7 +7,7 @@ let merge = require('gulp-merge-json');
 let data = require('gulp-data');
 let fs = require('fs');
 let browserSync = require('browser-sync').create();
-var browserify = require('gulp-browserify');
+let browserify = require('gulp-browserify');
 
 let paths = {
     dest: './dist',

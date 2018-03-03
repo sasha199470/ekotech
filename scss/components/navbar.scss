@@ -1,5 +1,5 @@
 nav {
-  display: flex;
+  display: none;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -11,6 +11,10 @@ nav {
   }
   a + a {
     margin-left: 30px;
+  }
+
+  @include media-breakpoint-min(sm) {
+    display: flex;
   }
 
   @include media-breakpoint-min(md) {
