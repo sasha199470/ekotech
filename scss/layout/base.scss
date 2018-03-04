@@ -17,7 +17,7 @@ body {
   color: white !important;
 }
 
-h1, h2 {
+h1, h2, h3{
   color: $header-text-color;
   line-height: normal;
   letter-spacing: 1px;
@@ -51,6 +51,15 @@ h2 {
   }
 }
 
+h3 {
+  font-family: 'lucida_granderegular', sans-serif;
+  line-height: 1.3;
+  font-weight: bold;
+  &.h3-min-margin {
+    margin-bottom: 15px;
+  }
+}
+
 a {
   color: $main-color;
   text-decoration: none;
@@ -62,4 +71,23 @@ a {
 
 .text-align-center {
   text-align: center;
+}
+.text-align-end {
+  text-align: end;
+}
+@include media-breakpoint-min(lg) {
+  .text-align-start-lg {
+    text-align: start;
+  }
+}
+.fixed {
+  position: fixed;
+}
+.relative {
+  position: relative;
+}
+p {
+  &.min-margin {
+    margin-bottom: 20px;
+  }
 }

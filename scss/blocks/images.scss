@@ -1,0 +1,21 @@
+.images {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-around;
+  @include media-breakpoint-min(lg) {
+   padding: 120px 0;
+  }
+  img {
+    width: 75px;
+    height: 100%;
+    cursor: pointer;
+    @include media-breakpoint-min(md) {
+      width: 155px;
+    }
+    @include media-breakpoint-min(lg) {
+      width: 200px;
+    }
+
+  }
+
+}
