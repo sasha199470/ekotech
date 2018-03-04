@@ -1,0 +1,14 @@
+.footer {
+  padding: 19px 0;
+  display: flex;
+  justify-content: flex-end;
+  @include media-breakpoint-min(md){
+    justify-content: space-between;
+  }
+  .logo {
+    display: none;
+    @include media-breakpoint-min(md){
+      display: block;
+    }
+  }
+}

@@ -60,7 +60,9 @@ a {
 .text-align-center {
   text-align: center;
 }
-
+.text-align-end {
+  text-align: end;
+}
 @include media-breakpoint-min(lg) {
   .text-align-start-lg {
     text-align: start;
