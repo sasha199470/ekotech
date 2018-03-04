@@ -2,13 +2,12 @@
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 require('./projects.js');
 require('./navbar.js');
-}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_2677bd29.js","/")
+}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_6f81a5d8.js","/")
 },{"./navbar.js":2,"./projects.js":3,"buffer":5,"pBGvAp":7}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 const navbarToggler = document.getElementById('navbar-toggler'),
       navbar = document.getElementsByTagName('nav').item(0),
       body = document.getElementsByTagName('body').item(0);
-
 
 navbarToggler.addEventListener('click', () => {
     navbarToggler.classList.toggle('active');
@@ -22,6 +21,7 @@ navbarToggler.addEventListener('click', () => {
 const displayBlock = 'block';
 const activeClass = 'active';
 const pointClass = 'scale-point';
+const lineClass = 'scale-line';
 
 let children = document.getElementById('scale').children;
 let selected = document.querySelectorAll(`[data-content-index='0']`).item(0);
@@ -30,11 +30,12 @@ selected.classList.add(displayBlock);
 let selectedPoint = document.querySelectorAll(`[data-index='0']`).item(0);
 selectedPoint.classList.add(activeClass);
 
+const contents = [];
+
 for(let i = 0; i < children.length; i++) {
     if (children[i].classList.contains(pointClass)) {
+        const index = children[i].dataset.index;
         children[i].addEventListener("click", () => {
-            const index = children[i].dataset.index;
-
             selected.classList.remove(displayBlock);
             selected = document.querySelectorAll(`[data-content-index='${index}']`).item(0);
             selected.classList.add(displayBlock);
@@ -44,7 +45,35 @@ for(let i = 0; i < children.length; i++) {
             selectedPoint.classList.add(activeClass);
         });
     }
+    else if (i !== 0 && children[i].classList.contains(lineClass)) {
+        const index = children[i].dataset.lineIndex;
+        const content = document.querySelectorAll(`[data-content-index='${index}']`).item(0);
+        contents.push(content);
+    }
 }
+
+function refreshLines() {
+    if (window.innerWidth < 576) {
+        contents.forEach(content => {
+            const index = content.dataset.contentIndex;
+            const line = document.querySelectorAll(`[data-line-index='${index}']`).item(0);
+            const contentStyle = getComputedStyle(content);
+            line.style.height = contentStyle.height;
+        })
+    }
+    else {
+        contents.forEach(content => {
+            const index = content.dataset.contentIndex;
+            const line = document.querySelectorAll(`[data-line-index='${index}']`).item(0);
+            line.style.height = "";
+        })
+    }
+}
+
+window.onload = refreshLines;
+window.onresize = () => {
+    refreshLines()
+};
 
 }).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/projects.js","/")
 },{"buffer":5,"pBGvAp":7}],4:[function(require,module,exports){
