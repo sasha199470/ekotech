@@ -1,22 +1,116 @@
+.services-container {
+  background-image: linear-gradient(to left, #f8f8f8, #efefef);
+  padding-top: 40px;
+}
 .services {
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  @include media-breakpoint-min(md){
+    justify-content: space-between;
+  }
   .service {
     flex:1 0 290px;
     max-width: 345px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 40px;
+    @include media-breakpoint-min(lg){
+      align-items: start;
+    }
     .number {
       font-size: 16px;
       font-weight: bold;
       border-radius: 100%;
-      border: solid 3px #ff7443;
+      border: solid 3px $main-color;
+      color: $header-text-color;
       width: 36px;
       height: 36px;
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-bottom: 24px;
     }
   }
+
+  *, *:before, *:after {
+    box-sizing: border-box;
+    outline: none;
+  }
+
+
+  label {
+    cursor: pointer;
+  }
+
+
+  .modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 10;
+    visibility: hidden;
+    //transition: background-color 500/2 linear;
+  }
+
+  .modal-content {
+    position: fixed;
+    top:10%;
+    left: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+    max-height: 90%;
+    overflow:auto;
+    border-radius: 4px;
+    transform: scale(0);
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    z-index: 9;
+    //.model-item {
+      background-color: white;
+      padding: 50px 40px;
+    //  overflow: auto;
+    //  z-index: 1110;
+    //
+    //}
+    .close {
+      position: relative;
+      float: right;
+      font-size: 18px;
+      //transition: transform 500 ease;
+      z-index: 11;
+
+      &:hover {
+        color: #2c3e50;
+        transform: rotate(540deg);
+      }
+    }
+
+  }
+
+
+  @for $i from 0 through 5 {
+    #modal#{$i} {
+      display: none;
+
+      &:checked ~ .modal-bg#{$i} {
+        visibility: visible;
+        background-color: #cccccc;
+        opacity: 1;
+        //transition: background-color 500/2 linear;
+      }
+
+      &:checked ~ .modal-content#{$i} {
+        visibility: visible;
+        transform: scale(1.0);
+        z-index: 13;
+      }
+    }
+  }
+
+
 }
