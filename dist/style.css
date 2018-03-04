@@ -305,21 +305,25 @@ button, .button {
   flex-direction: column-reverse; }
   .two-parts-block .text-wrapper {
     display: flex;
+    flex: 1 0 50%;
     align-items: center;
     justify-content: flex-end;
     width: 100%;
     box-sizing: border-box;
-    padding: 40px 25px;
+    padding: 40px 18px;
     background: #141720; }
-    @media (min-width: 769px) {
+    @media (min-width: 1201px) {
       .two-parts-block .text-wrapper {
-        padding: 0 135px; }
+        padding: 0 135px 0 18px; }
         .two-parts-block .text-wrapper .text {
           width: 450px; } }
   .two-parts-block .image img {
     display: block;
     width: 100%;
-    height: 177px; }
+    height: 207px; }
+  @media (min-width: 577px) {
+    .two-parts-block .image img {
+      height: 177px; } }
   @media (min-width: 769px) {
     .two-parts-block .image {
       width: 100%;
