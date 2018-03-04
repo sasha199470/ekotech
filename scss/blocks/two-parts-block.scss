@@ -38,6 +38,14 @@
     }
   }
 
+  button, .button {
+    width: 100%;
+
+    @include media-breakpoint-min(sm) {
+      width: auto;
+    }
+  }
+
   @include media-breakpoint-min(md) {
     flex-direction: row;
   }
