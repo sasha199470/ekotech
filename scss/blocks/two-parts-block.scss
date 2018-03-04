@@ -14,7 +14,7 @@
     background: #141720;
 
     @include media-breakpoint-min(xl) {
-      padding: 0 135px 0 18px;
+      padding: 0 115px 0 18px;
 
       .text {
         width: 450px;
@@ -55,5 +55,16 @@
 
   @include media-breakpoint-min(md) {
     flex-direction: row;
+
+    &.revers {
+      flex-direction: row-reverse;
+
+      @include media-breakpoint-min(xl) {
+        .text-wrapper {
+          justify-content: flex-start;
+          padding: 0 18px 0 115px;
+        }
+      }
+    }
   }
 }

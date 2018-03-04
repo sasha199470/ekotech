@@ -314,7 +314,7 @@ button, .button {
     background: #141720; }
     @media (min-width: 1201px) {
       .two-parts-block .text-wrapper {
-        padding: 0 135px 0 18px; }
+        padding: 0 115px 0 18px; }
         .two-parts-block .text-wrapper .text {
           width: 450px; } }
   .two-parts-block .image img {
@@ -337,7 +337,13 @@ button, .button {
         width: auto; } }
   @media (min-width: 769px) {
     .two-parts-block {
-      flex-direction: row; } }
+      flex-direction: row; }
+      .two-parts-block.revers {
+        flex-direction: row-reverse; } }
+    @media (min-width: 769px) and (min-width: 1201px) {
+      .two-parts-block.revers .text-wrapper {
+        justify-content: flex-start;
+        padding: 0 18px 0 115px; } }
 
 #scale {
   display: flex;
