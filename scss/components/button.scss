@@ -5,7 +5,7 @@
 button, .button {
   color: $main-color;
   background: transparent;
-  padding: 8px 18px;
+  padding: 10px 40px;
   border: 1px solid $main-color;
   border-radius: 100px;
   margin-right: 15px;
@@ -19,5 +19,9 @@ button, .button {
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @include media-breakpoint-min(sm) {
+    padding: 8px 18px;
   }
 }
