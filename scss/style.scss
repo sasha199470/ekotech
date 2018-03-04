@@ -11,13 +11,13 @@
 
 @import 'components/logo';
 @import 'components/navbar';
-@import 'components/name';
-@import 'components/two-parts-block';
 @import 'components/list';
 @import 'components/button';
-@import 'components/projects';
 
 @import 'helpers/displays';
 @import 'helpers/margins';
 
 @import "blocks/service";
+@import 'blocks/name';
+@import 'blocks/two-parts-block';
+@import 'blocks/projects';
