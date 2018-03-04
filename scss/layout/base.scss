@@ -52,8 +52,12 @@ h2 {
 }
 
 a {
-  color: inherit;
+  color: $main-color;
   text-decoration: none;
+
+  &.as-text {
+    color: inherit;
+  }
 }
 
 .text-align-center {

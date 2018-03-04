@@ -14,7 +14,7 @@ mixin getScaleContent(index)
 div.container.flex
   div#scale
     each project, index in projects
-      div.scale-line
+      div.scale-line(data-line-index=index - 1)
       div.scale-point(data-index=index)
         span.scale-date= project.date
   div.scale-content-wrapper
@@ -23,3 +23,4 @@ div.container.flex
     while i < n
       div.scale-content(data-content-index=i)
         +getScaleContent(i++)
+        button Подробнее

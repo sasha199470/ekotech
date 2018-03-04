@@ -40,8 +40,8 @@
 
 .scale-point {
   position: relative;
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
   border: 5px solid #d8d8d8;
   border-radius: 15px;
   background: transparent;
@@ -71,14 +71,14 @@
 }
 
 .scale-content-wrapper {
-  padding: 82px 0 0 26px;
+  padding: 76px 0 0 26px;
 
   @include media-breakpoint-max(sm) {
     h2 {
       font-size: 16px;
 
       font-weight: 400;
-      letter-spacing: 0px;
+      letter-spacing: 0;
     }
   }
 
@@ -87,14 +87,13 @@
   }
 
   @include media-breakpoint-min(md) {
-    padding-top: 142px;
+    padding-top: 146px;
   }
 }
 
 .scale-content {
   display: block;
-  min-height: 180px;
-  padding-bottom: 35px;
+  padding-bottom: 40px;
 
   @include media-breakpoint-min(sm) {
     min-height: inherit;
