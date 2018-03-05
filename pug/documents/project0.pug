@@ -1,6 +1,7 @@
 extends ./abstract-project
 
-include ../mixins/project-page
-
+block image
+  img.project-image(src=projects[0].image)
 block content
-  +projectPage(projects[0], 0)
+  div.container
+    +getProjectContent(0)

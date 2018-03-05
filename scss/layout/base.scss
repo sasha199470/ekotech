@@ -39,8 +39,13 @@ h1 {
 
 h2 {
   margin-bottom: 36px;
-  font-size: 28px;
+  font-size: 20px;
   font-family: 'lucida_granderegular', sans-serif;
+  font-weight: 400;
+
+  @include media-breakpoint-min(sm) {
+    font-size: 28px;
+  }
 
   &.h2-min-margin {
     margin-bottom: 20px;

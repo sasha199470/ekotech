@@ -90,8 +90,12 @@ h1 {
 
 h2 {
   margin-bottom: 36px;
-  font-size: 28px;
-  font-family: 'lucida_granderegular', sans-serif; }
+  font-size: 20px;
+  font-family: 'lucida_granderegular', sans-serif;
+  font-weight: 400; }
+  @media (min-width: 577px) {
+    h2 {
+      font-size: 28px; } }
   h2.h2-min-margin {
     margin-bottom: 20px; }
     @media (min-width: 577px) {
@@ -659,3 +663,10 @@ button, .button {
       margin-bottom: 40px; } }
   .project-image img {
     width: 100%; }
+
+.bread-crumbs {
+  font-size: 12px;
+  margin-bottom: 40px; }
+  @media (min-width: 577px) {
+    .bread-crumbs {
+      margin-bottom: 30px; } }
