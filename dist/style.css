@@ -318,6 +318,8 @@ button, .button {
     @media (min-width: 993px) {
       .services .service {
         align-items: start; } }
+    .services .service:hover h3 {
+      color: #ff7443; }
     .services .service .number {
       font-size: 16px;
       font-weight: bold;
