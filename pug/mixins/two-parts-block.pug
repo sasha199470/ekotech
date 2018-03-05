@@ -1,5 +1,5 @@
-mixin two-parts-block(context, revers)
-  div.two-parts-block(class=revers ? 'revers' : '')
+mixin two-parts-block(context, revers,id)
+  div.two-parts-block(class=revers ? 'revers' : '', id=id)
     div.text-wrapper
       div.text
         +getBlockContent(context)

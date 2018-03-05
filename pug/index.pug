@@ -7,10 +7,10 @@ block header
     include includes/header
 block content
   include includes/name
-  +two-parts-block(about)
+  +two-parts-block(about, false, "about")
   include includes/projects
   include includes/service
-  +two-parts-block(resources, true)
+  +two-parts-block(resources, true, "resources")
   include includes/image
   div#map
 block scripts
