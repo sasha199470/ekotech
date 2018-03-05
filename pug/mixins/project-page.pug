@@ -1,0 +1,6 @@
+include ../mixins/get-project-content
+
+mixin projectPage(project, index)
+  img(scr=project.image)
+  div.container
+    +getProjectContent(index)

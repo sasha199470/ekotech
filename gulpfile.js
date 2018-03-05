@@ -13,7 +13,7 @@ let paths = {
     dest: './dist',
     sass: './scss/style.scss',
     sassWatch: ['./scss/style.scss', './scss/**/*.scss'],
-    pug: ['./pug/*.pug', '!./pug/layout.pug'],
+    pug: ['./pug/*.pug', './pug/documents/*.pug', '!./pug/layout.pug'],
     pugWatch: ['./pug/*.pug', './pug/**/*.pug'],
     pugWithLayout: './pug/*.pug',
     jsonIn: ['./data/*.json', '!./data/data.json'],

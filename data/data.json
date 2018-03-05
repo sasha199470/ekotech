@@ -26,29 +26,34 @@
 	],
 	"projects": [
 		{
-			"view": 0,
 			"date": "2017 - н.в.",
-			"more": "#"
+			"more": "#",
+			"image": "./image/dummy.svg",
+			"link": "./project0.html"
 		},
 		{
-			"view": 0,
 			"date": "2016",
-			"more": "#"
+			"more": "#",
+			"image": "./image/dummy.svg",
+			"link": "./project1.html"
 		},
 		{
-			"view": 0,
 			"date": "2010 - 2017",
-			"more": "#"
+			"more": "#",
+			"image": "./image/dummy.svg",
+			"link": "./project2.html"
 		},
 		{
-			"view": 0,
 			"date": "2009 - 2010",
-			"more": "#"
+			"more": "#",
+			"image": "./image/dummy.svg",
+			"link": "./project3.html"
 		},
 		{
-			"view": 0,
 			"date": "2009 - 2010",
-			"more": "#"
+			"more": "#",
+			"image": "./image/dummy.svg",
+			"link": "./project4.html"
 		}
 	],
 	"resources": {
