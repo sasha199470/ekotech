@@ -3,32 +3,32 @@
     {
       "date": "2017 - н.в.",
       "more": "#",
-      "image": "./image/dummy.svg",
-      "link": "./project0.html"
+      "image": "images/projects/project-img-0.jpg",
+      "link": "documents/project0.html"
     },
     {
       "date": "2016",
       "more": "#",
-      "image": "./image/dummy.svg",
-      "link": "./project1.html"
+      "image": "images/projects/project-img-0.jpg",
+      "link": "documents/project1.html"
     },
     {
       "date": "2010 - 2017",
       "more": "#",
-      "image": "./image/dummy.svg",
-      "link": "./project2.html"
+      "image": "images/projects/project-img-0.jpg",
+      "link": "documents/project2.html"
     },
     {
       "date": "2009 - 2010",
       "more": "#",
-      "image": "./image/dummy.svg",
-      "link": "./project3.html"
+      "image": "images/projects/project-img-0.jpg",
+      "link": "documents/project3.html"
     },
     {
       "date": "2009 - 2010",
       "more": "#",
-      "image": "./image/dummy.svg",
-      "link": "./project4.html"
+      "image": "images/projects/project-img-0.jpg",
+      "link": "documents/project4.html"
     }
   ]
 }

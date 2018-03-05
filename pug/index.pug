@@ -1,7 +1,10 @@
-extend layout.pug
+extends layout
 
 include mixins/two-parts-block
 
+block header
+  div#main-page
+    include includes/header
 block content
   include includes/name
   +two-parts-block(about)
@@ -10,3 +13,7 @@ block content
   +two-parts-block(resources, true)
   include includes/image
   div#map
+block scripts
+  script(src="./js/main.js")
+  script(src="./js/map.js")
+  script(async, defer, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjOke5JR2hnTHmXvudtC2FDA9SFOvR5DE&callback=initMap")
