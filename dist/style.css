@@ -448,6 +448,9 @@ button, .button {
   @media (min-width: 769px) {
     .name {
       padding-bottom: 85px; } }
+  @media (min-width: 769px) {
+    .name {
+      padding-bottom: 145px; } }
 
 .description {
   display: inline-block;

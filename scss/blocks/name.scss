@@ -4,6 +4,10 @@
   @include media-breakpoint-min(md) {
     padding-bottom: 85px;
   }
+
+  @include media-breakpoint-min(md) {
+    padding-bottom: 145px;
+  }
 }
 .description {
   display: inline-block;
