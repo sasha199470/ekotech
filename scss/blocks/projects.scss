@@ -55,6 +55,10 @@
   @include media-breakpoint-min(sm) {
     &.active {
       border-color: $main-color;
+
+      .scale-date {
+        color: $main-color;
+      }
     }
   }
 }

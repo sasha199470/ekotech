@@ -554,7 +554,9 @@ button, .button {
   cursor: pointer; }
   @media (min-width: 577px) {
     .scale-point.active {
-      border-color: #ff7443; } }
+      border-color: #ff7443; }
+      .scale-point.active .scale-date {
+        color: #ff7443; } }
 
 .scale-date {
   position: absolute;
