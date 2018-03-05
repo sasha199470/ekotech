@@ -322,7 +322,7 @@ button, .button {
     .services {
       justify-content: space-between; } }
   .services .service {
-    flex: 1 0 290px;
+    flex: 1 0 292px;
     max-width: 345px;
     display: flex;
     flex-direction: column;
@@ -363,8 +363,6 @@ button, .button {
     position: fixed;
     top: 10%;
     left: 0;
-    margin-left: 10%;
-    margin-right: 10%;
     max-height: 90%;
     overflow: auto;
     border-radius: 4px;
@@ -375,6 +373,10 @@ button, .button {
     z-index: 9;
     background-color: white;
     padding: 50px 54px 50px 40px; }
+    @media (min-width: 769px) {
+      .services .modal-content {
+        margin-left: 10%;
+        margin-right: 10%; } }
     .services .modal-content .close {
       right: -24px;
       top: 0;
