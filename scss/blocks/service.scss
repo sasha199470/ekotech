@@ -10,7 +10,7 @@
     justify-content: space-between;
   }
   .service {
-    flex: 1 0 290px;
+    flex: 1 0 292px;
     max-width: 345px;
     display: flex;
     flex-direction: column;
@@ -64,8 +64,6 @@
     position: fixed;
     top: 10%;
     left: 0;
-    margin-left: 10%;
-    margin-right: 10%;
     max-height: 90%;
     overflow: auto;
     border-radius: 4px;
@@ -77,6 +75,10 @@
     //.model-item {
     background-color: white;
     padding: 50px 54px 50px 40px;
+    @include media-breakpoint-min(md){
+      margin-left: 10%;
+      margin-right: 10%;
+    }
     //  overflow: auto;px
     //  z-index: 1110;
     //
