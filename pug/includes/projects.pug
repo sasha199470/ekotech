@@ -11,7 +11,7 @@ mixin getScaleContent(index)
     when 4
       include ../projects/proj4
 
-div.container.flex
+div.container.flex#projects
   div#scale
     each project, index in projects
       div.scale-line(data-line-index=index - 1)

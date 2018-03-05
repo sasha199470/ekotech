@@ -256,7 +256,6 @@ button, .button {
   border: 1px solid #ff7443;
   border-radius: 100px;
   margin-right: 15px;
-  margin-bottom: 12px;
   font-size: 16px;
   cursor: pointer; }
   button.button-service, .button.button-service {
@@ -268,6 +267,8 @@ button, .button {
     flex: 0 0; }
     button.button-service:last-child, .button.button-service:last-child {
       margin-right: auto; }
+  button.margin-button, .button.margin-button {
+    margin-bottom: 12px; }
   button:focus, .button:focus {
     outline: none; }
   button:last-child, .button:last-child {
@@ -501,6 +502,9 @@ button, .button {
       .two-parts-block.revers .text-wrapper {
         justify-content: flex-start;
         padding: 0 18px 0 115px; } }
+
+#projects {
+  margin-bottom: 40px; }
 
 #scale {
   display: flex;
