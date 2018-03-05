@@ -7,5 +7,5 @@ div.container
         span
     nav
       each item in navbar
-        a.as-text(href="#")= item
+        a.as-text(href="#"+item.id)= item.titleRu
     img(class="logo" src=site.logo)
