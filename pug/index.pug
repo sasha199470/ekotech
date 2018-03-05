@@ -4,9 +4,9 @@ include mixins/two-parts-block
 
 block content
   include includes/name
-  +two-parts-block(about, "./images/dummy.svg")
+  +two-parts-block(about)
   include includes/projects
   include includes/service
-  +two-parts-block(resources, "./images/dummy.svg", true)
+  +two-parts-block(resources, true)
   include includes/image
   div#map

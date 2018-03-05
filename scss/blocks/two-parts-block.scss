@@ -23,25 +23,19 @@
   }
 
   .image {
-    img {
-      display: block;
-      width: 100%;
-      height: 207px;
-    }
+    width: 100%;
+    height: 207px;
+    background-size: cover;
 
     @include media-breakpoint-min(sm) {
-      img {
-        height: 177px;
-      }
+      height: 177px;
+      background-position-y: 40%;
     }
 
     @include media-breakpoint-min(md) {
       width: 100%;
-      height: 100%;
-
-      img {
-        height: 700px;
-      }
+      height: 700px;
+      background-position: top right;
     }
   }
 
@@ -58,6 +52,12 @@
 
     &.revers {
       flex-direction: row-reverse;
+
+      @include media-breakpoint-min(md) {
+        .image {
+          background-position: top left;
+        }
+      }
 
       @include media-breakpoint-min(xl) {
         .text-wrapper {
