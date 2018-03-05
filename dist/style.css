@@ -617,3 +617,9 @@ button, .button {
 
 #map {
   height: 192px; }
+  @media (min-width: 577px) {
+    #map {
+      height: 393px; } }
+  @media (min-width: 769px) {
+    #map {
+      height: 735px; } }
