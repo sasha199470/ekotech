@@ -2,7 +2,6 @@
   display: none;
   width: 156px;
   height: 52px;
-  margin-top: 25px;
 
   @include media-breakpoint-min(md) {
     display: block;
@@ -11,6 +10,7 @@
 
 #main-page .logo {
   display: block;
+  margin-top: 25px;
 
   @include media-breakpoint-min(sm) {
     margin-top: 78px;

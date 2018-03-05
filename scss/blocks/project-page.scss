@@ -1,5 +1,10 @@
 .project-image {
   width: 100%;
+  margin-bottom: 20px;
+
+  @include media-breakpoint-min(sm) {
+    margin-bottom: 40px;
+  }
 
   img {
     width: 100%;

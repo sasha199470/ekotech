@@ -1,11 +1,14 @@
 .name {
+  margin-top: 43px;
   padding-bottom: 75px;
 
-  @include media-breakpoint-min(md) {
+  @include media-breakpoint-min(sm) {
+    margin-top: -20px;
     padding-bottom: 85px;
   }
 
   @include media-breakpoint-min(md) {
+    margin-top: 170px;
     padding-bottom: 145px;
   }
 }

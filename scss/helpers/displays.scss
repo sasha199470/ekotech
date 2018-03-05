@@ -6,16 +6,18 @@
   display: block !important;
 }
 
-.block-sm {
-  display: none !important;
-  @include media-breakpoint-min(sm) {
-    display: block !important;
+.hide-blocks {
+  .block-sm {
+    display: none !important;
+    @include media-breakpoint-min(sm) {
+      display: block !important;
+    }
   }
-}
 
-.block-md {
-  display: none !important;
-  @include media-breakpoint-min(md) {
-    display: block !important;
+  .block-md {
+    display: none !important;
+    @include media-breakpoint-min(md) {
+      display: block !important;
+    }
   }
 }

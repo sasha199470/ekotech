@@ -79,7 +79,7 @@
 }
 
 .scale-content-wrapper {
-  padding: 76px 0 0 26px;
+  padding: 80px 0 0 26px;
 
   @include media-breakpoint-max(sm) {
     h2 {
@@ -103,9 +103,17 @@
   display: block;
   padding-bottom: 40px;
 
+  .button {
+    margin-bottom: 10px;
+  }
+
   @include media-breakpoint-min(sm) {
     min-height: inherit;
     display: none;
     padding: 0;
+
+    .button {
+      margin-bottom: 0;
+    }
   }
 }
