@@ -5,13 +5,13 @@ header {
   align-items: center;
 
   @include media-breakpoint-min(sm) {
-    padding: 45px 15px 19px;
+    padding: 45px 15px 40px;
   }
 
   @include media-breakpoint-min(md) {
     flex-direction: row-reverse;
     align-items: center;
-    padding: 30px 15px 200px;
+    padding: 30px 15px 30px;
   }
 }
 

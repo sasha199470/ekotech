@@ -1,0 +1,10 @@
+extends ../layout
+
+include ../mixins/get-project-content
+include ../mixins/bread-crumbs
+
+block base
+  base(href='../')
+block bread-crumbs
+  div.container
+    +breadCrumbs(['Главная', 'Документы'])

@@ -1,0 +1,4 @@
+mixin breadCrumbs(paths)
+  div.bread-crumbs
+    each path, index in paths
+      span= path + (index === paths.length - 1 ? "" : "/")

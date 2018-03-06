@@ -1,0 +1,8 @@
+.bread-crumbs {
+  font-size: 12px;
+  margin-bottom: 40px;
+
+  @include media-breakpoint-min(sm) {
+    margin-bottom: 30px;
+  }
+}

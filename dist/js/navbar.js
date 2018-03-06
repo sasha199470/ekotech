@@ -1,82 +1,26 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-require('./projects.js');
-require('./navbar.js');
-}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_744487e.js","/")
-},{"./navbar.js":2,"./projects.js":3,"buffer":5,"pBGvAp":7}],2:[function(require,module,exports){
-(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 const navbarToggler = document.getElementById('navbar-toggler'),
       navbar = document.getElementsByTagName('nav').item(0),
       body = document.getElementsByTagName('body').item(0);
 
 navbarToggler.addEventListener('click', () => {
+    toggle();
+});
+
+for (let i = 0; i < navbar.children.length; i++) {
+    navbar.children[i].addEventListener('click', () => {
+        toggle();
+    })
+}
+
+function toggle() {
     navbarToggler.classList.toggle('active');
     navbar.classList.toggle('active');
     body.classList.toggle('fix');
-});
-
-}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/navbar.js","/")
-},{"buffer":5,"pBGvAp":7}],3:[function(require,module,exports){
-(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-const displayBlock = 'block';
-const activeClass = 'active';
-const pointClass = 'scale-point';
-const lineClass = 'scale-line';
-
-let children = document.getElementById('scale').children;
-let selected = document.querySelectorAll(`[data-content-index='0']`).item(0);
-selected.classList.add(displayBlock);
-
-let selectedPoint = document.querySelectorAll(`[data-index='0']`).item(0);
-selectedPoint.classList.add(activeClass);
-
-const contents = [];
-
-for(let i = 0; i < children.length; i++) {
-    if (children[i].classList.contains(pointClass)) {
-        const index = children[i].dataset.index;
-        children[i].addEventListener("click", () => {
-            selected.classList.remove(displayBlock);
-            selected = document.querySelectorAll(`[data-content-index='${index}']`).item(0);
-            selected.classList.add(displayBlock);
-
-            selectedPoint.classList.remove(activeClass);
-            selectedPoint = document.querySelectorAll(`[data-index='${index}']`).item(0);
-            selectedPoint.classList.add(activeClass);
-        });
-    }
-    else if (i !== 0 && children[i].classList.contains(lineClass)) {
-        const index = children[i].dataset.lineIndex;
-        const content = document.querySelectorAll(`[data-content-index='${index}']`).item(0);
-        contents.push(content);
-    }
 }
-
-function refreshLines() {
-    if (window.innerWidth < 576) {
-        contents.forEach(content => {
-            const index = content.dataset.contentIndex;
-            const line = document.querySelectorAll(`[data-line-index='${index}']`).item(0);
-            const contentStyle = getComputedStyle(content);
-            line.style.height = contentStyle.height;
-        })
-    }
-    else {
-        contents.forEach(content => {
-            const index = content.dataset.contentIndex;
-            const line = document.querySelectorAll(`[data-line-index='${index}']`).item(0);
-            line.style.height = "";
-        })
-    }
-}
-
-window.onload = refreshLines;
-window.onresize = () => {
-    refreshLines()
-};
-
-}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/projects.js","/")
-},{"buffer":5,"pBGvAp":7}],4:[function(require,module,exports){
+}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_8e6feb2.js","/")
+},{"buffer":3,"pBGvAp":5}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
@@ -204,7 +148,7 @@ var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 }(typeof exports === 'undefined' ? (this.base64js = {}) : exports))
 
 }).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../node_modules/base64-js/lib/b64.js","/../node_modules/base64-js/lib")
-},{"buffer":5,"pBGvAp":7}],5:[function(require,module,exports){
+},{"buffer":3,"pBGvAp":5}],3:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*!
  * The buffer module from node.js, for the browser.
@@ -1317,7 +1261,7 @@ function assert (test, message) {
 }
 
 }).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../node_modules/buffer/index.js","/../node_modules/buffer")
-},{"base64-js":4,"buffer":5,"ieee754":6,"pBGvAp":7}],6:[function(require,module,exports){
+},{"base64-js":2,"buffer":3,"ieee754":4,"pBGvAp":5}],4:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
@@ -1405,7 +1349,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 }
 
 }).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../node_modules/ieee754/index.js","/../node_modules/ieee754")
-},{"buffer":5,"pBGvAp":7}],7:[function(require,module,exports){
+},{"buffer":3,"pBGvAp":5}],5:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // shim for using process in browser
 
@@ -1472,4 +1416,4 @@ process.chdir = function (dir) {
 };
 
 }).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../node_modules/process/browser.js","/../node_modules/process")
-},{"buffer":5,"pBGvAp":7}]},{},[1])
+},{"buffer":3,"pBGvAp":5}]},{},[1])

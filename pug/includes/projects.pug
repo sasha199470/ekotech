@@ -1,15 +1,4 @@
-mixin getScaleContent(index)
-  case index
-    when 0
-      include ../projects/proj0
-    when 1
-      include ../projects/proj1
-    when 2
-      include ../projects/proj2
-    when 3
-      include ../projects/proj3
-    when 4
-      include ../projects/proj4
+include ../mixins/get-project-content
 
 div.container.flex#projects
   div#scale
@@ -18,9 +7,9 @@ div.container.flex#projects
       div.scale-point(data-index=index)
         span.scale-date= project.date
   div.scale-content-wrapper
-    - var n = projects.length;
-    - var i = 0;
-    while i < n
+    -for(let i = 0; i < projects.length; i++)
+      -project = projects[i]
       div.scale-content(data-content-index=i)
-        +getScaleContent(i++)
-        button Подробнее
+        div.hide-blocks
+          +getProjectContent(i)
+          a.button(href=project.link) Подробнее

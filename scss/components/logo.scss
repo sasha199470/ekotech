@@ -1,6 +1,15 @@
 .logo {
+  display: none;
   width: 156px;
   height: 52px;
+
+  @include media-breakpoint-min(md) {
+    display: block;
+  }
+}
+
+#main-page .logo {
+  display: block;
   margin-top: 25px;
 
   @include media-breakpoint-min(sm) {
