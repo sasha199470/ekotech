@@ -1,7 +1,18 @@
-mixin modalWindow(index, targetText, image)
+mixin modalWindow(index, city, dir, count)
+  - const startImg = dir + 'img-0.jpg';
   input(type='checkbox' id="modal" + index class='modal')
-  label(for="modal" + index class="service")
-    p= targetText
+  label(for="modal" + index class="service showModal" data-index=index)
+    li= city
   label(for="modal" + index class="modal-bg modal-bg" + index)
-  div(class="modal-content modal-content" + index)
-    img(src=image)
+  div(class="modal-content modal-content" + index + " gallery")
+    div.image-header
+        label(for="modal" + index class="close")
+        h2= city
+        div.image-count
+          span(id='current-img-' + index) 1
+          span= "/"
+          span(id='all-images-' + index)= count
+    img(src=startImg)
+    div.left-arrow.hidden(id = 'left-' + index)
+    div.right-arrow(id = 'right-' + index)
+

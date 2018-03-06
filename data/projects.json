@@ -4,7 +4,20 @@
       "date": "2017 - н.в.",
       "more": "#",
       "image": "images/projects/project-img-0.jpg",
-      "link": "documents/project0.html"
+      "link": "documents/project0.html",
+      "cities": [
+        {
+          "name": "г. Крымск (Краснодарский край)",
+          "images": {
+            "dir": "images/projects/proj0/",
+            "count": 92
+          }
+        }
+
+      ],
+      "trash": ["г. Сасово (Рязанская область)",
+      "г. Екатеринбург 1 (Свердловская область)",
+      "г. Щелково (Московская область)"]
     },
     {
       "date": "2016",

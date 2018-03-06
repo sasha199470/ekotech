@@ -1,0 +1,33 @@
+.modal-content.gallery {
+  padding: 0;
+
+  img {
+    width: 100%;
+  }
+
+  .image-header {
+    position: relative;
+    padding: 20px;
+    background: white;
+
+    h2 {
+      margin: 0;
+      padding-right: 20px;
+    }
+  }
+
+  .close {
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%);
+  }
+
+  .image-count {
+    color: #9c9c9c;
+    font-size: 16px;
+  }
+
+  @include media-breakpoint-max(sm) {
+    height: 100%;
+  }
+}

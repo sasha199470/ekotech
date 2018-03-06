@@ -1,0 +1,33 @@
+.right-arrow, .left-arrow {
+  width: 74px;
+  height: 74px;
+  cursor: pointer;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.right-arrow {
+  background: url("images/right-arrow.svg");
+}
+
+.left-arrow {
+  background: url("images/left-arrow.svg");
+}
+
+.gallery {
+  .right-arrow, .left-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .left-arrow {
+    left: 24px;
+  }
+
+  .right-arrow {
+    right: 24px;
+  }
+}

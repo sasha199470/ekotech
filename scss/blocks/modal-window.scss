@@ -30,10 +30,7 @@ label {
   box-sizing: border-box;
   @include media-breakpoint-min(md){
     max-height: 80%;
-    top: 10%;
-    bottom: 10%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 10%;
     width: 80%;
   }
   .close {
