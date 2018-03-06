@@ -9,6 +9,7 @@ class Gallery {
         this.countImages = -1;
         this.currentImage = -1;
         this.currentImagesEl = {};
+        this.image = {};
 
         this.environmentSetUp();
     }
@@ -30,6 +31,7 @@ class Gallery {
                 this.countImages = parseInt(document.getElementById(`all-images-${index}`).innerHTML);
                 this.currentImage = 1;
                 this.currentImagesEl = document.getElementById(`current-img-${index}`);
+                this.image = document.getElementById(`image-${index}`);
 
                 this.arrowsEvents();
             })
@@ -50,26 +52,28 @@ class Gallery {
         this.leftArrow.addEventListener('click', () => {
             this.currentImage--;
             checkHide();
+            this.image.setAttribute('src', `images/projects/proj0/img-${this.currentImage}.jpg`);
             this.currentImagesEl.innerHTML = this.currentImage;
         });
         this.rightArrow.addEventListener('click', () => {
             this.currentImage++;
             checkHide();
+            this.image.setAttribute('src', `images/projects/proj0/img-${this.currentImage}.jpg`);
             this.currentImagesEl.innerHTML = this.currentImage;
         });
     }
 
     addOrRemoveHiddenClass(leftCondition, rightCondition) {
         if (leftCondition())
-            this.leftArrow.classList.add(hiddenClass);
-        else if (this.leftArrow.classList.contains(hiddenClass)) {
-            this.leftArrow.classList.remove(hiddenClass);
+            this.leftArrow.classList.add(Gallery.hiddenClass);
+        else if (this.leftArrow.classList.contains(Gallery.hiddenClass)) {
+            this.leftArrow.classList.remove(Gallery.hiddenClass);
         }
         if (rightCondition()) {
-            this.rightArrow.classList.add(hiddenClass);
+            this.rightArrow.classList.add(Gallery.hiddenClass);
         }
-        else if (this.rightArrow.classList.contains(hiddenClass)) {
-            this.rightArrow.classList.remove(hiddenClass);
+        else if (this.rightArrow.classList.contains(Gallery.hiddenClass)) {
+            this.rightArrow.classList.remove(Gallery.hiddenClass);
         }
     }
 

@@ -12,7 +12,7 @@ mixin modalWindow(index, city, dir, count)
           span(id='current-img-' + index) 1
           span= "/"
           span(id='all-images-' + index)= count
-    img(src=startImg)
+    img(id='image-' + index src=startImg)
     div.left-arrow.hidden(id = 'left-' + index)
     div.right-arrow(id = 'right-' + index)
 

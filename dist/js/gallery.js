@@ -11,6 +11,7 @@ class Gallery {
         this.countImages = -1;
         this.currentImage = -1;
         this.currentImagesEl = {};
+        this.image = {};
 
         this.environmentSetUp();
     }
@@ -32,6 +33,7 @@ class Gallery {
                 this.countImages = parseInt(document.getElementById(`all-images-${index}`).innerHTML);
                 this.currentImage = 1;
                 this.currentImagesEl = document.getElementById(`current-img-${index}`);
+                this.image = document.getElementById(`image-${index}`);
 
                 this.arrowsEvents();
             })
@@ -52,33 +54,35 @@ class Gallery {
         this.leftArrow.addEventListener('click', () => {
             this.currentImage--;
             checkHide();
+            this.image.setAttribute('src', `images/projects/proj0/img-${this.currentImage}.jpg`);
             this.currentImagesEl.innerHTML = this.currentImage;
         });
         this.rightArrow.addEventListener('click', () => {
             this.currentImage++;
             checkHide();
+            this.image.setAttribute('src', `images/projects/proj0/img-${this.currentImage}.jpg`);
             this.currentImagesEl.innerHTML = this.currentImage;
         });
     }
 
     addOrRemoveHiddenClass(leftCondition, rightCondition) {
         if (leftCondition())
-            this.leftArrow.classList.add(hiddenClass);
-        else if (this.leftArrow.classList.contains(hiddenClass)) {
-            this.leftArrow.classList.remove(hiddenClass);
+            this.leftArrow.classList.add(Gallery.hiddenClass);
+        else if (this.leftArrow.classList.contains(Gallery.hiddenClass)) {
+            this.leftArrow.classList.remove(Gallery.hiddenClass);
         }
         if (rightCondition()) {
-            this.rightArrow.classList.add(hiddenClass);
+            this.rightArrow.classList.add(Gallery.hiddenClass);
         }
-        else if (this.rightArrow.classList.contains(hiddenClass)) {
-            this.rightArrow.classList.remove(hiddenClass);
+        else if (this.rightArrow.classList.contains(Gallery.hiddenClass)) {
+            this.rightArrow.classList.remove(Gallery.hiddenClass);
         }
     }
 
 }
 
 new Gallery();
-}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_df99205.js","/")
+}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_c259f760.js","/")
 },{"buffer":3,"pBGvAp":5}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
