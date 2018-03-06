@@ -1,20 +1,7 @@
-mixin ModalWindow(index,src)
-    input(
-    type='checkbox'
-    id=index
-    class='modal'
-    )
-    label(
-    for=index
-    class="service"
-    )
-        img(
-        src=src
-        )
-    label(
-    for=index
-    class="modal-bg modal-bg" + index
-    )
-    div(
-    class="modal-content modal-content" + index
-    )
+mixin modalWindow(index, targetText, image)
+  input(type='checkbox' id="modal" + index class='modal')
+  label(for="modal" + index class="service")
+    p= targetText
+  label(for="modal" + index class="modal-bg modal-bg" + index)
+  div(class="modal-content modal-content" + index)
+    img(src=image)
