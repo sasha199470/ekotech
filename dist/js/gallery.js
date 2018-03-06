@@ -27,6 +27,9 @@ class Gallery {
     environmentSetUp() {
         for (let i = 0; i < Gallery.getTargetTexts.length; i++) {
             Gallery.getTargetTexts[i].addEventListener('click', () => {
+                if (i === this.currentImage - 1) {
+                    return;
+                }
                 const index = targetTexts[i].dataset.index;
                 this.leftArrow = document.getElementById(`left-${index}`);
                 this.rightArrow = document.getElementById(`right-${index}`);
@@ -82,7 +85,7 @@ class Gallery {
 }
 
 new Gallery();
-}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_c259f760.js","/")
+}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_90c90969.js","/")
 },{"buffer":3,"pBGvAp":5}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';

@@ -652,7 +652,8 @@ label {
   @media (min-width: 769px) {
     .modal-content {
       max-height: 80%;
-      margin: 10%;
+      top: 10%;
+      margin: 0 10% 10% 10%;
       width: 80%; } }
   .modal-content .close {
     right: -40px;

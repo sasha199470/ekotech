@@ -25,6 +25,9 @@ class Gallery {
     environmentSetUp() {
         for (let i = 0; i < Gallery.getTargetTexts.length; i++) {
             Gallery.getTargetTexts[i].addEventListener('click', () => {
+                if (i === this.currentImage - 1) {
+                    return;
+                }
                 const index = targetTexts[i].dataset.index;
                 this.leftArrow = document.getElementById(`left-${index}`);
                 this.rightArrow = document.getElementById(`right-${index}`);

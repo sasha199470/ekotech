@@ -1,7 +1,7 @@
 {
   "navbar": [
     {"titleRu":"Главная",
-    "id":"main"},
+    "id":"main-page"},
     {"titleRu":"О компании",
       "id":"about"},
     {"titleRu":"Опыт",
