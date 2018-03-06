@@ -1,8 +1,20 @@
+.container-header {
+
+  @include media-breakpoint-min(md) {
+    position: fixed;
+    top: 0;
+    background: white;
+    width: 100%;
+    z-index: 1000;
+  }
+}
+
 header {
   display: flex;
   flex-wrap: wrap-reverse;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 
   @include media-breakpoint-min(sm) {
     padding: 45px 15px 40px;
@@ -12,14 +24,27 @@ header {
     flex-direction: row-reverse;
     align-items: center;
     padding: 30px 15px 30px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1135px;
   }
 }
 
 .navbar-toggler-wrapper {
   display: block;
   width: 100%;
-  padding: 18px 0;
+  padding: 18px 0 18px 18px;
   box-sizing: border-box;
+
+  @include media-breakpoint-max(sm) {
+    position: fixed;
+    top: 0;
+    background: white;
+    z-index: 1000;
+  }
 
   @include media-breakpoint-min(sm) {
     display: none;
@@ -43,8 +68,6 @@ header {
   }
 
   &.active {
-    position: fixed;
-    z-index: 11;
     span:nth-child(1) {
       top: 9px;
       transform: rotate(45deg);
