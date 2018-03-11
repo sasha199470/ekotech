@@ -1,6 +1,7 @@
 include ../mixins/get-project-content
 
-div.container.flex#projects
+div.container.flex
+  div.dummy#projects
   div#scale
     each project, index in projects
       div.scale-line(data-line-index=index - 1)

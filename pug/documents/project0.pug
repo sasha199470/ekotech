@@ -5,6 +5,5 @@ block image
 block content
   div.container
     +getProjectContent(0)
-    ul.main-color
-      each city, index in projects[0].cities
-        +modalWindow(index, city.name, city.images.dir, city.images.count)
+    div.main-color
+      +modalWindow(0, "Посмотреть фотографии", projects[0].images.dir, projects[0].images.count)

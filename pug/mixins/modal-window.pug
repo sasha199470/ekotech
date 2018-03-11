@@ -1,13 +1,13 @@
 mixin modalWindow(index, city, dir, count)
-  - const startImg = dir + 'img-0.jpg';
+  - const startImg = dir + 'img0.jpg';
   input(type='checkbox' id="modal" + index class='modal')
   label(for="modal" + index class="service showModal" data-index=index)
-    li= city
+    p= city
   label(for="modal" + index class="modal-bg modal-bg" + index)
   div(class="modal-content modal-content" + index + " gallery")
     div.image-header
         label(for="modal" + index class="close")
-        h2= city
+        //h2= city
         div.image-count
           span(id='current-img-' + index) 1
           span= "/"

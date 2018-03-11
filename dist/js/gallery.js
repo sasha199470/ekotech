@@ -1,11 +1,12 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 const hiddenClass = 'hidden';
-const targetTexts = document.getElementsByClassName('showModal');
+const targetText = document.getElementsByClassName('showModal')[0];
 
 class Gallery {
 
     constructor() {
+        this.index = 0;
         this.leftArrow = {};
         this.rightArrow = {};
         this.countImages = -1;
@@ -25,45 +26,47 @@ class Gallery {
     }
 
     environmentSetUp() {
-        for (let i = 0; i < Gallery.getTargetTexts.length; i++) {
-            Gallery.getTargetTexts[i].addEventListener('click', () => {
-                if (i === this.currentImage - 1) {
-                    return;
-                }
-                const index = targetTexts[i].dataset.index;
-                this.leftArrow = document.getElementById(`left-${index}`);
-                this.rightArrow = document.getElementById(`right-${index}`);
-                this.countImages = parseInt(document.getElementById(`all-images-${index}`).innerHTML);
-                this.currentImage = 1;
-                this.currentImagesEl = document.getElementById(`current-img-${index}`);
-                this.image = document.getElementById(`image-${index}`);
+        // for (let i = 0; i < Gallery.getTargetTexts.length; i++) {
+        //     Gallery.getTargetTexts[i].addEventListener('click', () => {
+        //         if (i === this.currentImage - 1) {
+        //             return;
+        //         }
+                this.index = targetText.dataset.index;
+                this.leftArrow = document.getElementById(`left-${this.index}`);
+                this.rightArrow = document.getElementById(`right-${this.index}`);
+                this.countImages = parseInt(document.getElementById(`all-images-${this.index}`).innerHTML);
+                this.currentImage = 0;
+                this.currentImagesEl = document.getElementById(`current-img-${this.index}`);
+                this.image = document.getElementById(`image-${this.index}`);
                 this.close = document.getElementsByClassName('close');
                 this.image.style.height = document.documentElement.clientHeight * 0.8 - 108 + 'px';
-                let style = this.image.currentStyle || window.getComputedStyle(this.image);
-                this.leftArrow.style.left = style.marginLeft;
-                this.rightArrow.style.right = style.marginRight;
+                setTimeout(() => {
+                    let style = this.image.currentStyle || window.getComputedStyle(this.image);
+                    this.leftArrow.style.left = style.marginLeft;
+                    this.rightArrow.style.right = style.marginRight;
+                }, 500);
 
                 this.arrowsEvents();
-            })
-        }
+        //     })
+        // }
     }
 
     arrowsEvents() {
         const hl = () => {
             this.currentImage--;
             checkHide();
-            this.image.setAttribute('src', `images/projects/proj0/img-${this.currentImage}.jpg`);
+            this.image.setAttribute('src', `images/projects/proj${this.index}/img${this.currentImage}.jpg`);
             this.currentImagesEl.innerHTML = this.currentImage;
             setTimeout(() => {
                 let style = this.image.currentStyle || window.getComputedStyle(this.image);
                 this.leftArrow.style.left = style.marginLeft;
                 this.rightArrow.style.right = style.marginRight;
             }, 500);
-        }
+        };
         const hr = () => {
             this.currentImage++;
             checkHide();
-            this.image.setAttribute('src', `images/projects/proj0/img-${this.currentImage}.jpg`);
+            this.image.setAttribute('src', `images/projects/proj${this.index}/img${this.currentImage}.jpg`);
             this.currentImagesEl.innerHTML = this.currentImage;
             setTimeout(() => {
                 let style = this.image.currentStyle || window.getComputedStyle(this.image);
@@ -76,20 +79,12 @@ class Gallery {
         this.rightArrow.removeEventListener('click', hr);
 
         const checkHide = () => this.addOrRemoveHiddenClass(
-            () => this.currentImage === 1,
+            () => this.currentImage === 0,
             () => this.currentImage === this.countImages - 1
         );
 
         this.leftArrow.addEventListener('click', hl);
-
         this.rightArrow.addEventListener('click', hr);
-
-        console.log(this.close)
-
-        this.close[0].addEventListener('click', () => {
-            this.leftArrow.removeEventListener('click', hl);
-            this.rightArrow.removeEventListener('click', hr);
-        });
     }
 
     addOrRemoveHiddenClass(leftCondition, rightCondition) {
@@ -109,7 +104,7 @@ class Gallery {
 }
 
 new Gallery();
-}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_454f69d0.js","/")
+}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_18110278.js","/")
 },{"buffer":3,"pBGvAp":5}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';

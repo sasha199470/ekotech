@@ -145,6 +145,15 @@ p.min-margin {
 .main-color {
   color: #ff7443; }
 
+.dummy {
+  display: block;
+  position: absolute;
+  top: 0;
+  transform: translateY(-97px); }
+  @media (min-width: 769px) {
+    .dummy {
+      transform: translateY(-112px); } }
+
 .container {
   position: relative;
   width: 100%;
@@ -378,6 +387,7 @@ button, .button {
   margin-bottom: 15px; }
 
 .services-container {
+  position: relative;
   background-image: linear-gradient(to left, #f8f8f8, #efefef);
   padding-top: 40px; }
 
@@ -437,6 +447,7 @@ button, .button {
 
 .two-parts-block {
   display: flex;
+  position: relative;
   width: 100%;
   flex-direction: column-reverse; }
   .two-parts-block .text-wrapper {

@@ -110,3 +110,14 @@ p {
 .main-color {
   color: $main-color;
 }
+
+.dummy {
+  display: block;
+  position: absolute;
+  top: 0;
+  transform: translateY(-97px);
+
+  @include media-breakpoint-min(md) {
+    transform: translateY(-112px);
+  }
+}

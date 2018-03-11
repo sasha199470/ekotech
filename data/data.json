@@ -34,7 +34,7 @@
 		},
 		{
 			"titleRu": "Карта проектов",
-			"id": "map"
+			"id": "map-anchor"
 		}
 	],
 	"projects": [
@@ -44,46 +44,50 @@
 			"more": "#",
 			"image": "images/projects/project-img-0.png",
 			"link": "documents/project0.html",
-			"cities": [
-				{
-					"name": "г. Крымск (Краснодарский край)",
-					"images": {
-						"dir": "images/projects/proj0/",
-						"count": 92
-					}
-				}
-			],
-			"trash": [
-				"г. Сасово (Рязанская область)",
-				"г. Екатеринбург 1 (Свердловская область)",
-				"г. Щелково (Московская область)"
-			]
+			"images": {
+				"dir": "images/projects/proj0/",
+				"count": 24
+			}
 		},
 		{
 			"title": "Финансово-технический и строительный аудиту проекта строительства гидроэлектростанций «Белопорожская-1» и «Белопорожская-2» на территории Республики Карелия.",
 			"date": "2016",
 			"more": "#",
-			"link": "documents/project1.html"
+			"link": "documents/project1.html",
+			"images": {
+				"dir": "images/projects/proj1/",
+				"count": 0
+			}
 		},
 		{
 			"title": "Финансово-технический и строительный надзор строительства Полоцкой ГЭС на реке Западная Двина.",
 			"date": "2010 - 2017",
 			"more": "#",
 			"image": "images/projects/project-img-2.jpg",
-			"link": "documents/project2.html"
+			"link": "documents/project2.html",
+			"images": {
+				"dir": "images/projects/proj2/",
+				"count": 32
+			}
 		},
 		{
 			"title": "Экспертиза Архитектурного проекта «Строительство Полоцкой ГЭС на реке Западная Двина» и Контракта на выполнение комплексного строительства гидроузла.",
 			"date": "2009 - 2010",
 			"more": "#",
-			"image": "images/projects/project-img-3.png",
+			"images": {
+				"dir": "images/projects/proj3/",
+				"count": 4
+			},
 			"link": "documents/project3.html"
 		},
 		{
 			"title": "Технический аудит строящихся и эксплуатируемых газотурбинных ТЭЦ по 10 построенным и 18 строящимся электростанциям.",
 			"date": "2009 - 2010",
 			"more": "#",
-			"image": "images/projects/project-img-4.jpg",
+			"images": {
+				"dir": "images/projects/proj4/",
+				"count": 16
+			},
 			"link": "documents/project4.html"
 		}
 	],
