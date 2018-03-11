@@ -10,7 +10,7 @@ class Gallery {
         this.currentImage = -1;
         this.currentImagesEl = {};
         this.image = {};
-
+        this.close = {};
         this.environmentSetUp();
     }
 
@@ -35,6 +35,11 @@ class Gallery {
                 this.currentImage = 1;
                 this.currentImagesEl = document.getElementById(`current-img-${index}`);
                 this.image = document.getElementById(`image-${index}`);
+                this.close = document.getElementsByClassName('close');
+                this.image.style.height = document.documentElement.clientHeight * 0.8 - 108 + 'px';
+                let style = this.image.currentStyle || window.getComputedStyle(this.image);
+                this.leftArrow.style.left = style.marginLeft;
+                this.rightArrow.style.right = style.marginRight;
 
                 this.arrowsEvents();
             })
@@ -42,27 +47,46 @@ class Gallery {
     }
 
     arrowsEvents() {
-        this.leftArrow.removeEventListener('click', () => {
-        });
-        this.rightArrow.removeEventListener('click', () => {
-        });
+        const hl = () => {
+            this.currentImage--;
+            checkHide();
+            this.image.setAttribute('src', `images/projects/proj0/img-${this.currentImage}.jpg`);
+            this.currentImagesEl.innerHTML = this.currentImage;
+            setTimeout(() => {
+                let style = this.image.currentStyle || window.getComputedStyle(this.image);
+                this.leftArrow.style.left = style.marginLeft;
+                this.rightArrow.style.right = style.marginRight;
+            }, 500);
+        }
+        const hr = () => {
+            this.currentImage++;
+            checkHide();
+            this.image.setAttribute('src', `images/projects/proj0/img-${this.currentImage}.jpg`);
+            this.currentImagesEl.innerHTML = this.currentImage;
+            setTimeout(() => {
+                let style = this.image.currentStyle || window.getComputedStyle(this.image);
+                this.leftArrow.style.left = style.marginLeft;
+                this.rightArrow.style.right = style.marginRight;
+            }, 500);
+
+        }
+        this.leftArrow.removeEventListener('click', hl);
+        this.rightArrow.removeEventListener('click', hr);
 
         const checkHide = () => this.addOrRemoveHiddenClass(
             () => this.currentImage === 1,
             () => this.currentImage === this.countImages - 1
         );
 
-        this.leftArrow.addEventListener('click', () => {
-            this.currentImage--;
-            checkHide();
-            this.image.setAttribute('src', `images/projects/proj0/img-${this.currentImage}.jpg`);
-            this.currentImagesEl.innerHTML = this.currentImage;
-        });
-        this.rightArrow.addEventListener('click', () => {
-            this.currentImage++;
-            checkHide();
-            this.image.setAttribute('src', `images/projects/proj0/img-${this.currentImage}.jpg`);
-            this.currentImagesEl.innerHTML = this.currentImage;
+        this.leftArrow.addEventListener('click', hl);
+
+        this.rightArrow.addEventListener('click', hr);
+
+        console.log(this.close)
+
+        this.close[0].addEventListener('click', () => {
+            this.leftArrow.removeEventListener('click', hl);
+            this.rightArrow.removeEventListener('click', hr);
         });
     }
 

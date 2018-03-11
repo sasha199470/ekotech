@@ -800,9 +800,14 @@ label {
     z-index: 2000; }
 
 .modal-content.gallery {
-  padding: 0; }
+  padding: 0;
+  max-height: calc(80% + 20px); }
   .modal-content.gallery img {
-    width: 100%; }
+    width: auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px; }
   .modal-content.gallery .image-header {
     position: relative;
     padding: 20px;

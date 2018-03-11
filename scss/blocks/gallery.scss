@@ -1,8 +1,13 @@
 .modal-content.gallery {
   padding: 0;
+  max-height: calc(80% + 20px);
 
   img {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
   }
 
   .image-header {
