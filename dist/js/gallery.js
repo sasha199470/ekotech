@@ -38,10 +38,10 @@ class Gallery {
                 this.currentImagesEl = document.getElementById(`current-img-${index}`);
                 this.image = document.getElementById(`image-${index}`);
                 this.close = document.getElementsByClassName('close');
-                this.image.style.height = document.documentElement.clientHeight*0.8 - 108 +'px';
+                this.image.style.height = document.documentElement.clientHeight * 0.8 - 108 + 'px';
                 let style = this.image.currentStyle || window.getComputedStyle(this.image);
-                this.leftArrow.style.left=style.marginLeft;
-                this.rightArrow.style.right=style.marginRight;
+                this.leftArrow.style.left = style.marginLeft;
+                this.rightArrow.style.right = style.marginRight;
 
                 this.arrowsEvents();
             })
@@ -49,15 +49,15 @@ class Gallery {
     }
 
     arrowsEvents() {
-         const hl =() => {
+        const hl = () => {
             this.currentImage--;
             checkHide();
             this.image.setAttribute('src', `images/projects/proj0/img-${this.currentImage}.jpg`);
             this.currentImagesEl.innerHTML = this.currentImage;
-            setTimeout( () => {
+            setTimeout(() => {
                 let style = this.image.currentStyle || window.getComputedStyle(this.image);
-                this.leftArrow.style.left=style.marginLeft;
-                this.rightArrow.style.right=style.marginRight;
+                this.leftArrow.style.left = style.marginLeft;
+                this.rightArrow.style.right = style.marginRight;
             }, 500);
         }
         const hr = () => {
@@ -65,10 +65,10 @@ class Gallery {
             checkHide();
             this.image.setAttribute('src', `images/projects/proj0/img-${this.currentImage}.jpg`);
             this.currentImagesEl.innerHTML = this.currentImage;
-            setTimeout( () => {
+            setTimeout(() => {
                 let style = this.image.currentStyle || window.getComputedStyle(this.image);
-                this.leftArrow.style.left=style.marginLeft;
-                this.rightArrow.style.right=style.marginRight;
+                this.leftArrow.style.left = style.marginLeft;
+                this.rightArrow.style.right = style.marginRight;
             }, 500);
 
         }
@@ -86,7 +86,7 @@ class Gallery {
 
         console.log(this.close)
 
-        this.close[0].addEventListener('click',()=>{
+        this.close[0].addEventListener('click', () => {
             this.leftArrow.removeEventListener('click', hl);
             this.rightArrow.removeEventListener('click', hr);
         });
@@ -109,7 +109,7 @@ class Gallery {
 }
 
 new Gallery();
-}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_f5e9cb3a.js","/")
+}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_1fd72f09.js","/")
 },{"buffer":3,"pBGvAp":5}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';

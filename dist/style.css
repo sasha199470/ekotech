@@ -519,9 +519,9 @@ button, .button {
   margin: 8px 0;
   cursor: pointer; }
   @media (min-width: 577px) {
-    .scale-point.active {
+    .scale-point.active, .scale-point:hover {
       border-color: #ff7443; }
-      .scale-point.active .scale-date {
+      .scale-point.active .scale-date, .scale-point:hover .scale-date {
         color: #ff7443; } }
 
 .scale-date {

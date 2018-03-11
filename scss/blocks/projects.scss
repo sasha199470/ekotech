@@ -53,7 +53,7 @@
   cursor: pointer;
 
   @include media-breakpoint-min(sm) {
-    &.active {
+    &.active, &:hover {
       border-color: $main-color;
 
       .scale-date {
