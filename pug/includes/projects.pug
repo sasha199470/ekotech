@@ -10,6 +10,6 @@ div.container.flex#projects
     -for(let i = 0; i < projects.length; i++)
       -project = projects[i]
       div.scale-content(data-content-index=i)
-        div.hide-blocks
-          +getProjectContent(i)
-          a.button(href=project.link) Подробнее
+        h2=project.title
+        img(src=project.image)
+        a.button(href=project.link) Подробнее

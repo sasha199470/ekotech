@@ -107,6 +107,10 @@
     margin-bottom: 10px;
   }
 
+  img {
+    width: 100%;
+  }
+
   @include media-breakpoint-min(sm) {
     min-height: inherit;
     display: none;

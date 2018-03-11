@@ -1,9 +1,10 @@
 {
   "projects": [
     {
+      "title": "Строительный аудит и финансово-технический надзор за строительством малых гидроэлектростанций «Белопорожская ГЭС-1» и «Белопорожская ГЭС-2», а также объектов электросетевого хозяйства для их присоединения к сетям в Республике Карелия",
       "date": "2017 - н.в.",
       "more": "#",
-      "image": "images/projects/project-img-0.jpg",
+      "image": "images/projects/project-img-0.png",
       "link": "documents/project0.html",
       "cities": [
         {
@@ -20,27 +21,30 @@
       "г. Щелково (Московская область)"]
     },
     {
+      "title": "Финансово-технический и строительный аудиту проекта строительства гидроэлектростанций «Белопорожская-1» и «Белопорожская-2» на территории Республики Карелия.",
       "date": "2016",
       "more": "#",
-      "image": "images/projects/project-img-0.jpg",
       "link": "documents/project1.html"
     },
     {
+      "title": "Финансово-технический и строительный надзор строительства Полоцкой ГЭС на реке Западная Двина.",
       "date": "2010 - 2017",
       "more": "#",
-      "image": "images/projects/project-img-0.jpg",
+      "image": "images/projects/project-img-2.jpg",
       "link": "documents/project2.html"
     },
     {
+      "title": "Экспертиза Архитектурного проекта «Строительство Полоцкой ГЭС на реке Западная Двина» и Контракта на выполнение комплексного строительства гидроузла.",
       "date": "2009 - 2010",
       "more": "#",
-      "image": "images/projects/project-img-0.jpg",
+      "image": "images/projects/project-img-3.png",
       "link": "documents/project3.html"
     },
     {
+      "title": "Технический аудит строящихся и эксплуатируемых газотурбинных ТЭЦ по 10 построенным и 18 строящимся электростанциям.",
       "date": "2009 - 2010",
       "more": "#",
-      "image": "images/projects/project-img-0.jpg",
+      "image": "images/projects/project-img-4.jpg",
       "link": "documents/project4.html"
     }
   ]
