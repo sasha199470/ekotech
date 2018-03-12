@@ -97,7 +97,7 @@ h1 {
       font-size: 44px; } }
 
 h2 {
-  margin-bottom: 36px;
+  margin-bottom: 30px;
   font-size: 20px;
   font-family: 'lucida_granderegular', sans-serif;
   font-weight: 400; }
@@ -389,7 +389,8 @@ button, .button {
 .services-container {
   position: relative;
   background-image: linear-gradient(to left, #f8f8f8, #efefef);
-  padding-top: 40px; }
+  padding-top: 90px;
+  padding-bottom: 90px; }
 
 .services {
   flex-wrap: wrap;
@@ -548,7 +549,8 @@ button, .button {
   transform: translateX(100%);
   white-space: nowrap;
   font-weight: 700;
-  line-height: 1; }
+  line-height: 1;
+  color: #d8d8d8; }
   @media (min-width: 577px) {
     .scale-date {
       right: auto;
@@ -573,6 +575,7 @@ button, .button {
   display: block;
   padding-bottom: 40px; }
   .scale-content .button {
+    margin-top: 30px;
     margin-bottom: 10px; }
   .scale-content img {
     width: 100%; }

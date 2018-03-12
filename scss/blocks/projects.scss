@@ -70,6 +70,7 @@
   white-space: nowrap;
   font-weight: 700;
   line-height: 1;
+  color: #d8d8d8;
 
   @include media-breakpoint-min(sm) {
     right: auto;
@@ -104,6 +105,7 @@
   padding-bottom: 40px;
 
   .button {
+    margin-top: 30px;
     margin-bottom: 10px;
   }
 
