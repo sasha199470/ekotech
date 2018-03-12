@@ -647,6 +647,9 @@ button, .button {
   @media (min-width: 1201px) {
     .project-image {
       height: 434px; } }
+  @media (min-width: 1290px) {
+    .project-image {
+      height: 580px; } }
 
 .bread-crumbs {
   font-size: 12px;

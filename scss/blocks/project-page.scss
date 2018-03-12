@@ -21,4 +21,8 @@
   @include media-breakpoint-min(xl) {
     height: 434px;
   }
+
+  @media (min-width: 1290px) {
+    height: 580px;
+  }
 }
