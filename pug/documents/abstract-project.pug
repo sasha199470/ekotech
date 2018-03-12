@@ -3,9 +3,13 @@ extends ../layout
 include ../mixins/get-project-content
 include ../mixins/bread-crumbs
 include ../mixins/modal-window
+include ../mixins/gallery
 
 block base
   base(href='../')
+append styles
+  link(rel="stylesheet" type="text/css" href="slick/slick.css")
+  link(rel="stylesheet" type="text/css" href="slick/slick-theme.css")
 block bread-crumbs
   div.container
     +breadCrumbs(['Главная', 'Документы'])

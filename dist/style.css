@@ -357,15 +357,16 @@ button, .button {
 .left-arrow {
   background: url("images/left-arrow.svg"); }
 
-.gallery .right-arrow, .gallery .left-arrow {
+#slider .right-arrow, #slider .left-arrow, #slider-nav .right-arrow, #slider-nav .left-arrow {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%); }
+  transform: translateY(-50%);
+  z-index: 100; }
 
-.gallery .left-arrow {
+#slider .left-arrow, #slider-nav .left-arrow {
   left: 24px; }
 
-.gallery .right-arrow {
+#slider .right-arrow, #slider-nav .right-arrow {
   right: 24px; }
 
 .flex {

@@ -5,5 +5,4 @@ block image
 block content
   div.container
     +getProjectContent(0)
-    div.main-color
-      +modalWindow(0, "Посмотреть фотографии", projects[0].images.dir, projects[0].images.count)
+    +gallery(projects[0])

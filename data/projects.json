@@ -7,7 +7,7 @@
       "image": "images/projects/project-img-0.png",
       "link": "documents/project0.html",
       "images": {
-        "dir": "images/projects/proj0/",
+        "dir": "images/projects/proj0",
         "count": 24
       }
     },
@@ -18,7 +18,7 @@
       "image": "images/projects/project-img-1.png",
       "link": "documents/project1.html",
       "images": {
-        "dir": "images/projects/proj1/",
+        "dir": "images/projects/proj1",
         "count": 0
       }
     },
@@ -29,7 +29,7 @@
       "image": "images/projects/project-img-2.jpg",
       "link": "documents/project2.html",
       "images": {
-        "dir": "images/projects/proj2/",
+        "dir": "images/projects/proj2",
         "count": 32
       }
     },
@@ -39,7 +39,7 @@
       "more": "#",
       "image": "images/projects/project-img-3.png",
       "images": {
-        "dir": "images/projects/proj3/",
+        "dir": "images/projects/proj3",
         "count": 4
       },
       "link": "documents/project3.html"
@@ -50,7 +50,7 @@
       "more": "#",
       "image": "images/projects/project-img-4.jpg",
       "images": {
-        "dir": "images/projects/proj4/",
+        "dir": "images/projects/proj4",
         "count": 16
       },
       "link": "documents/project4.html"
