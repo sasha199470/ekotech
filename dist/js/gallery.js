@@ -67,7 +67,7 @@ class Gallery {
             this.currentImage++;
             checkHide();
             this.image.setAttribute('src', `images/projects/proj${this.index}/img${this.currentImage}.jpg`);
-            this.currentImagesEl.innerHTML = this.currentImage;
+            this.currentImagesEl.innerHTML = this.currentImage+1;
             setTimeout(() => {
                 let style = this.image.currentStyle || window.getComputedStyle(this.image);
                 this.leftArrow.style.left = style.marginLeft;
@@ -104,7 +104,7 @@ class Gallery {
 }
 
 new Gallery();
-}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_18110278.js","/")
+}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_4e9c3d96.js","/")
 },{"buffer":3,"pBGvAp":5}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';

@@ -65,7 +65,7 @@ class Gallery {
             this.currentImage++;
             checkHide();
             this.image.setAttribute('src', `images/projects/proj${this.index}/img${this.currentImage}.jpg`);
-            this.currentImagesEl.innerHTML = this.currentImage;
+            this.currentImagesEl.innerHTML = this.currentImage+1;
             setTimeout(() => {
                 let style = this.image.currentStyle || window.getComputedStyle(this.image);
                 this.leftArrow.style.left = style.marginLeft;
