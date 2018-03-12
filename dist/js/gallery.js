@@ -61,14 +61,9 @@ class Gallery {
                 let style = this.image.currentStyle || window.getComputedStyle(this.image);
                 this.leftArrow.style.left = style.marginLeft;
                 this.rightArrow.style.right = style.marginRight;
-            }
+            };
             this.image.setAttribute('src', `images/projects/proj${this.index}/img${this.currentImage}.jpg`);
-            this.currentImagesEl.innerHTML = this.currentImage;
-            // setTimeout(() => {
-            //     let style = this.image.currentStyle || window.getComputedStyle(this.image);
-            //     this.leftArrow.style.left = style.marginLeft;
-            //     this.rightArrow.style.right = style.marginRight;
-            // }, 500);
+            this.currentImagesEl.innerHTML = this.currentImage+1;
         };
         const hr = () => {
             this.currentImage++;
@@ -80,15 +75,8 @@ class Gallery {
             }
             this.image.setAttribute('src', `images/projects/proj${this.index}/img${this.currentImage}.jpg`);
             this.currentImagesEl.innerHTML = this.currentImage+1;
-            setTimeout(() => {
-                let style = this.image.currentStyle || window.getComputedStyle(this.image);
-                this.leftArrow.style.left = style.marginLeft;
-                this.rightArrow.style.right = style.marginRight;
-            }, 500);
 
-        }
-        this.leftArrow.removeEventListener('click', hl);
-        this.rightArrow.removeEventListener('click', hr);
+        };
 
         const checkHide = () => this.addOrRemoveHiddenClass(
             () => this.currentImage === 0,
@@ -116,7 +104,7 @@ class Gallery {
 }
 
 new Gallery();
-}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_28921381.js","/")
+}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_fd3dba14.js","/")
 },{"buffer":3,"pBGvAp":5}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';

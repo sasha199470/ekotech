@@ -142,6 +142,9 @@ a {
 p.min-margin {
   margin-bottom: 20px; }
 
+.flex-wrap {
+  flex-wrap: wrap; }
+
 .main-color {
   color: #ff7443; }
 
@@ -633,7 +636,7 @@ button, .button {
   height: 113px;
   margin-bottom: 20px;
   background-position: center;
-  width: 100%; }
+  background-size: 100% auto; }
   @media (min-width: 577px) {
     .project-image {
       margin-bottom: 40px;

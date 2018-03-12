@@ -59,14 +59,9 @@ class Gallery {
                 let style = this.image.currentStyle || window.getComputedStyle(this.image);
                 this.leftArrow.style.left = style.marginLeft;
                 this.rightArrow.style.right = style.marginRight;
-            }
+            };
             this.image.setAttribute('src', `images/projects/proj${this.index}/img${this.currentImage}.jpg`);
-            this.currentImagesEl.innerHTML = this.currentImage;
-            // setTimeout(() => {
-            //     let style = this.image.currentStyle || window.getComputedStyle(this.image);
-            //     this.leftArrow.style.left = style.marginLeft;
-            //     this.rightArrow.style.right = style.marginRight;
-            // }, 500);
+            this.currentImagesEl.innerHTML = this.currentImage+1;
         };
         const hr = () => {
             this.currentImage++;
@@ -78,15 +73,8 @@ class Gallery {
             }
             this.image.setAttribute('src', `images/projects/proj${this.index}/img${this.currentImage}.jpg`);
             this.currentImagesEl.innerHTML = this.currentImage+1;
-            setTimeout(() => {
-                let style = this.image.currentStyle || window.getComputedStyle(this.image);
-                this.leftArrow.style.left = style.marginLeft;
-                this.rightArrow.style.right = style.marginRight;
-            }, 500);
 
-        }
-        this.leftArrow.removeEventListener('click', hl);
-        this.rightArrow.removeEventListener('click', hr);
+        };
 
         const checkHide = () => this.addOrRemoveHiddenClass(
             () => this.currentImage === 0,

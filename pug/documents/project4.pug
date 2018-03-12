@@ -1,7 +1,7 @@
 extends ./abstract-project
 
 block image
-  img.project-image(src=projects[4].image)
+  div.project-image(style={'background-image': `url(${projects[4].image})`})
 block content
   div.container
     +getProjectContent(4)
