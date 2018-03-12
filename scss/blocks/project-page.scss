@@ -1,12 +1,24 @@
 .project-image {
   width: 100%;
+  height: 113px;
   margin-bottom: 20px;
+  background-position: center;
+  width: 100%;
 
   @include media-breakpoint-min(sm) {
     margin-bottom: 40px;
+    height: 232px;
   }
 
-  img {
-    width: 100%;
+  @include media-breakpoint-min(md) {
+    height: 300px;
+  }
+
+  @include media-breakpoint-min(lg) {
+    height: 362px;
+  }
+
+  @include media-breakpoint-min(xl) {
+    height: 434px;
   }
 }

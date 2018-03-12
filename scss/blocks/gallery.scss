@@ -1,6 +1,10 @@
 .modal-content.gallery {
   padding: 0;
   max-height: calc(80% + 20px);
+  width:100%;
+  @include media-breakpoint-min(md){
+    width:80%;
+  }
 
   img {
     width: auto;
