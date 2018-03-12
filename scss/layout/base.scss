@@ -54,7 +54,7 @@ h2 {
   font-weight: 400;
 
   @include media-breakpoint-min(sm) {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   &.h2-min-margin {
