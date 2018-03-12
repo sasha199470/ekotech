@@ -22,7 +22,7 @@
     height: 434px;
   }
 
-  @media (min-width: 1290px) {
+  @include media-breakpoint-min(xxl) {
     height: 580px;
   }
 }
