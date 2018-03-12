@@ -585,7 +585,7 @@ button, .button {
       display: none;
       padding: 0; }
       .scale-content .button {
-        margin-bottom: 0; } }
+        margin-bottom: 30px; } }
 
 .images {
   padding: 40px 0;
@@ -647,7 +647,7 @@ button, .button {
   @media (min-width: 1201px) {
     .project-image {
       height: 434px; } }
-  @media (min-width: 1290px) {
+  @media (min-width: 1920px) {
     .project-image {
       height: 580px; } }
 
