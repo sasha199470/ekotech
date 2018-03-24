@@ -2,7 +2,7 @@ const $ = require("jquery");
 require("slick-carousel");
 
 $('#slider').slick({
-    lazyLoad: 'ondemand',
+    lazyLoad: 'progressive',
     speed: 500,
     fade: true,
     cssEase: 'linear',
