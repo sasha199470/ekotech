@@ -1,5 +1,4 @@
 mixin gallery(project)
   div#slider
-    img(src=`${project.images.dir}/img0.jpg`)
-    -for(let i = 1; i < project.images.count; i++)
-      img(data-lazy=`${project.images.dir}/img${i}.jpg`)
+    -for(let i = 0; i < project.images.count; i++)
+      img(src=`${project.images.dir}/img${i}.jpg`)
