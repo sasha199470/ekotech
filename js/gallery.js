@@ -8,6 +8,5 @@ $('#slider').slick({
     cssEase: 'linear',
     adaptiveHeight: true,
     prevArrow: '<div class="left-arrow"></div>',
-    nextArrow: '<div class="right-arrow"></div>',
-    arrowKeys: true
-})
+    nextArrow: '<div class="right-arrow"></div>'
+});
