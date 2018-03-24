@@ -11,9 +11,11 @@ $('#slider').slick({
     adaptiveHeight: true,
     prevArrow: '<div class="left-arrow"></div>',
     nextArrow: '<div class="right-arrow"></div>',
+    lazyload: true,
+    arrowKeys: true
 })
 
-}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_362f14dd.js","/")
+}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_a027d16a.js","/")
 },{"buffer":3,"jquery":5,"pBGvAp":6,"slick-carousel":7}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';

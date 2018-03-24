@@ -359,8 +359,7 @@ button, .button {
 
 #slider .right-arrow, #slider .left-arrow, #slider-nav .right-arrow, #slider-nav .left-arrow {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 10px;
   z-index: 100; }
 
 #slider .left-arrow, #slider-nav .left-arrow {

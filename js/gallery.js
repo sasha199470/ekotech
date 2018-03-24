@@ -9,4 +9,6 @@ $('#slider').slick({
     adaptiveHeight: true,
     prevArrow: '<div class="left-arrow"></div>',
     nextArrow: '<div class="right-arrow"></div>',
+    lazyload: true,
+    arrowKeys: true
 })
