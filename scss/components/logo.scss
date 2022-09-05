@@ -2,14 +2,22 @@
   display: none;
   width: 156px;
   height: 52px;
+  font-size: 24px;
+  font-weight: bold;
+
+  span {
+    margin-left: 11px;
+  }
 
   @include media-breakpoint-min(md) {
-    display: block;
+    display: flex;
+    align-items: center;
   }
 }
 
 #main-page .logo {
-  display: block;
+  display: flex;
+  align-items: center;
   margin-top: 25px;
 
   @include media-breakpoint-min(sm) {

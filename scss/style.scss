@@ -13,6 +13,7 @@
 @import 'components/navbar';
 @import 'components/list';
 @import 'components/button';
+@import 'components/arrows';
 
 @import 'helpers/displays';
 @import 'helpers/margins';
@@ -26,3 +27,5 @@
 @import "blocks/map";
 @import "blocks/project-page";
 @import "blocks/bread-crumbs";
+@import "blocks/modal-window";
+@import "blocks/gallery";

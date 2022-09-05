@@ -53,7 +53,7 @@
   cursor: pointer;
 
   @include media-breakpoint-min(sm) {
-    &.active {
+    &.active, &:hover {
       border-color: $main-color;
 
       .scale-date {
@@ -70,6 +70,7 @@
   white-space: nowrap;
   font-weight: 700;
   line-height: 1;
+  color: #d8d8d8;
 
   @include media-breakpoint-min(sm) {
     right: auto;
@@ -104,7 +105,12 @@
   padding-bottom: 40px;
 
   .button {
+    margin-top: 30px;
     margin-bottom: 10px;
+  }
+
+  img {
+    width: 100%;
   }
 
   @include media-breakpoint-min(sm) {
@@ -113,7 +119,7 @@
     padding: 0;
 
     .button {
-      margin-bottom: 0;
+      margin-bottom: 30px;
     }
   }
 }

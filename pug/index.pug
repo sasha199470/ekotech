@@ -12,7 +12,9 @@ block content
   include includes/service
   +two-parts-block(resources, true, "resources")
   include includes/image
-  div#map
+  div.map-wrapper.relative
+    div.dummy#map-anchor
+    div#map
 block scripts
   script(src="./js/main.js")
   script(src="./js/map.js")

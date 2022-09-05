@@ -48,13 +48,13 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 36px;
+  margin-bottom: 30px;
   font-size: 20px;
   font-family: 'lucida_granderegular', sans-serif;
   font-weight: 400;
 
   @include media-breakpoint-min(sm) {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   &.h2-min-margin {
@@ -104,5 +104,23 @@ a {
 p {
   &.min-margin {
     margin-bottom: 20px;
+  }
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.main-color {
+  color: $main-color;
+}
+
+.dummy {
+  display: block;
+  position: absolute;
+  top: 0;
+  transform: translateY(-97px);
+
+  @include media-breakpoint-min(md) {
+    transform: translateY(-112px);
   }
 }

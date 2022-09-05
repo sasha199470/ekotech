@@ -1,0 +1,4 @@
+mixin gallery(project)
+  div#slider
+    -for(let i = 0; i < project.images.count; i++)
+      img(src=`${project.images.dir}/img${i}.jpg`)

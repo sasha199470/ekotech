@@ -1,6 +1,7 @@
 include ../mixins/get-project-content
 
-div.container.flex#projects
+div.container.flex
+  div.dummy#projects
   div#scale
     each project, index in projects
       div.scale-line(data-line-index=index - 1)
@@ -10,6 +11,6 @@ div.container.flex#projects
     -for(let i = 0; i < projects.length; i++)
       -project = projects[i]
       div.scale-content(data-content-index=i)
-        div.hide-blocks
-          +getProjectContent(i)
-          a.button(href=project.link) Подробнее
+        h2=project.title
+        img(src=project.image)
+        a.button(href=project.link) Подробнее

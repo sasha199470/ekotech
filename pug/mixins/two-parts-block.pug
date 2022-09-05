@@ -1,5 +1,6 @@
 mixin two-parts-block(context, revers,id)
-  div.two-parts-block(class=revers ? 'revers' : '', id=id)
+  div.two-parts-block(class=revers ? 'revers' : '')
+    div.dummy(id=id)
     div.text-wrapper
       div.text
         +getBlockContent(context)
@@ -13,4 +14,26 @@ mixin getBlockContent(context)
       li(href="#")= item
   div.button-block
     each button in context.buttons
-      button.margin-button= button
+      input(
+      type='checkbox'
+      id='modal6'
+      class='modal'
+      )
+      label(
+      for="modal6"
+      class="service"
+      )
+        div(class="button margin-button text-align-center")=button
+      label(
+      for="modal6"
+      class="modal-bg modal-bg6"
+      )
+      div(
+      class="modal-content modal-content6")
+        p.relative.flex.flex-wrap Вы можете связаться с нами по электронному адресу&#160
+          label(
+          for="modal6"
+          class="close"
+          )
+          img.text-align-end(src="images/email.svg")
+

@@ -9,7 +9,7 @@
     display: none;
     margin: 0;
     @include media-breakpoint-min(md){
-      display: block;
+      display: flex;
     }
   }
 }

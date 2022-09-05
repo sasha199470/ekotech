@@ -33,6 +33,7 @@ let paths = {
     js: {
         main: 'js/main.js',
         navbar: 'js/navbar.js',
+        gallery: 'js/gallery.js',
         watch: 'js/*',
     }
 };
@@ -93,8 +94,16 @@ gulp.task('js:navbar', () => {
         .pipe(gulp.dest(paths.dest.js))
 });
 
+gulp.task('js:gallery', () => {
+    return gulp.src(paths.js.gallery)
+        .pipe(browserify({
+            insertGlobals: true,
+        }))
+        .pipe(gulp.dest(paths.dest.js))
+});
+
 gulp.task('pug', gulp.parallel('pug:main', 'pug:projects'));
-gulp.task('js', gulp.parallel('js:main', 'js:navbar'));
+gulp.task('js', gulp.parallel('js:main', 'js:navbar', 'js:gallery'));
 
 gulp.task("default", gulp.series(gulp.series('json', gulp.parallel('scss', 'pug', 'js')), 'start-server'));
 
